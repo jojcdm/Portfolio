@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Pressure Vessel — Jack Johnston</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Jack Johnston</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <div class="nav-dropdown">
+          <button type="button" class="nav-link active" data-dropdown-trigger aria-haspopup="true">
+            Portfolio <span class="dropdown-caret">&#9662;</span>
+          </button>
+          <div class="dropdown-menu" role="menu">
+            <a href="projects.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">All Projects Overview</span>
+              <span class="dropdown-sub">Index &amp; Specification Matrix</span>
+            </a>
+            <a href="tilt-table.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">AD5M 3+2-Axis Tilt Table</span>
+              <span class="dropdown-sub">Flagship &middot; Rev. V6 &middot; Klipper</span>
+            </a>
+            <a href="magpie.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Project Magpie</span>
+              <span class="dropdown-sub">MagPick MP-340 &middot; Sorting Robot</span>
+            </a>
+            <a href="bionic-arm.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Bionic Arm</span>
+              <span class="dropdown-sub">60+ Parts &middot; 500+ Hours</span>
+            </a>
+            <a href="pressure-vessel.html" class="dropdown-item active" role="menuitem">
+              <span class="dropdown-title">Lab Pressure Vessel</span>
+              <span class="dropdown-sub">500 psig &middot; O-Ring Release Design</span>
+            </a>
+          </div>
+        </div>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" data-theme-toggle>Light</button>
+        <button type="button" class="mobile-menu-btn" data-mobile-toggle>Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-drawer" data-mobile-drawer aria-label="Mobile Navigation">
+    <a href="index.html" class="">Home</a>
+    <a href="experience.html" class="">Experience</a>
+    <a href="projects.html" class="">Portfolio &mdash; All Projects</a>
+    <a href="tilt-table.html" class="sub">AD5M 3+2-Axis Tilt Table</a>
+    <a href="magpie.html" class="sub">Project Magpie</a>
+    <a href="bionic-arm.html" class="sub">Bionic Arm</a>
+    <a href="pressure-vessel.html" class="sub active">Lab Pressure Vessel</a>
+    <a href="resume.html" class="">Resume</a>
+    <a href="contact.html" class="">Contact</a>
+  </nav>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="projects.html" class="eyebrow">Portfolio</a>
+          <span class="eyebrow">/</span>
+          <span class="eyebrow">Machine Design &middot; Team Project &middot; Fall 2026</span>
+        </div>
+        <h1>Lab Pressure Vessel</h1>
+        <p class="lead" style="max-width:740px;margin-top:18px;">
+          A machined 6061-T6 aluminum vessel that holds 55 cc of liquid at 500 psig and was
+          designed to release at 1000 psig by blowing out its O-ring, with no valve and no metal
+          failure. Team of three, $100 budget, sized from the Parker O-Ring Handbook and Shigley.
+        </p>
+        <div class="hairline-grid cols-4" style="margin-top:36px;">
+          <div class="hairline-cell"><span class="label">Volume</span><div class="metric-val">55 cc</div><div class="metric-sub">&Oslash;1.226 bore &times; 2.843 chamber</div></div>
+          <div class="hairline-cell"><span class="label">Working Pressure</span><div class="metric-val">500 psig</div><div class="metric-sub">Radial O-ring seal, AS568-214</div></div>
+          <div class="hairline-cell"><span class="label">Design Release</span><div class="metric-val">1000 psig</div><div class="metric-sub">O-ring extrusion, metal intact</div></div>
+          <div class="hairline-cell"><span class="label">Parts Cost</span><div class="metric-val">$75.25</div><div class="metric-sub">Bar stock, O-rings, screws</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="grid-2" style="align-items:start;margin-bottom:48px;">
+          <figure class="figure-card">
+            <div class="figure-frame cad-light">
+              <img src="images/pressure-vessel/fig01_vessel_cad.jpg" alt="SolidWorks render of the vessel body: a cylinder with a blind bore and four tapped holes in the top face">
+            </div>
+            <figcaption class="caption"><strong>Figure 1:</strong> Vessel body. Blind &Oslash;1.226 bore and four 1/4-20 tapped holes in the open end.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <div class="figure-frame cad-light">
+              <img src="images/pressure-vessel/fig02_cap_cad.jpg" alt="SolidWorks render of the cap: a flange with four clearance holes, a central NPT port and a spigot with an O-ring groove underneath">
+            </div>
+            <figcaption class="caption"><strong>Figure 2:</strong> Cap. Flange, 1/4-18 NPT port, and the spigot that carries the O-ring groove.</figcaption>
+          </figure>
+        </div>
+
+        <div class="section-header-stack">
+          <span class="eyebrow">01 / Problem &amp; Goal</span>
+          <h2>Seal at 500, let go at 1000</h2>
+        </div>
+        <div class="grid-2" style="margin-bottom:40px;">
+          <p>
+            The brief: hold 50&ndash;60 cc of liquid at 500 psig with at least one working O-ring,
+            use a threaded joint besides the fluid port, take a 1/4" NPT Swagelok fitting, and be
+            easy to machine (no 304/316 stainless). The hard part was the last rule: at 1000 psig
+            the vessel had to unseal and release the liquid on its own, with no relief valve and
+            no metal failure.
+          </p>
+          <p>
+            We chose to make the O-ring the weak link. Pressure pushes the ring against the
+            low-pressure side of its groove; if the gap there is big enough, the rubber squeezes
+            into it, tears and lets the liquid out. Everything metal &mdash; wall, end wall, screws,
+            threads &mdash; was sized to keep a large safety factor well past 1000 psig.
+          </p>
+        </div>
+
+        <div class="section-header-stack">
+          <span class="eyebrow">02 / Design</span>
+          <h2>How it works</h2>
+        </div>
+        <div class="hairline-grid cols-3" style="margin-bottom:40px;">
+          <div class="hairline-cell">
+            <span class="index-num">A</span>
+            <h3 style="margin:10px 0 8px;">Radial O-Ring Gland</h3>
+            <p class="metric-sub">An AS568 2-214 Buna-N 70A ring sits in a &Oslash;1.0185 groove on the cap spigot and seals against the &Oslash;1.226 bore. Following the handbook's size table, compression stays 20.1&ndash;26.6% across all tolerances, stretch 2.1&ndash;4.8% (limit 6%) and groove fill under 79%. A first idea, a 1.250 bore, was dropped because it stretched the ring 7.2%.</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="index-num">B</span>
+            <h3 style="margin:10px 0 8px;">Built-In Release Gap</h3>
+            <p class="metric-sub">The spigot has two lands. The chamber-side land is a close H8/f7 fit that keeps the ring centred. The land on the outside of the groove is turned smaller, to the measured bore minus .0106", the extrusion gap the Parker chart gives for a 70A ring at 1000 psi. At 500 psi the same ring would need about .017", so the working pressure sits near half the limit.</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="index-num">C</span>
+            <h3 style="margin:10px 0 8px;">Body, Cap &amp; Screws</h3>
+            <p class="metric-sub">Both parts are turned from one 2-1/4" 6061-T6 bar. The wall would not start to yield until about 12,000 psi, roughly 12&times; the release pressure. The cap is held by 1/4-20 Grade 5 screws at 20 lbf&middot;in (400 lbf preload); proof-load safety factor stays above 3 at 1000 psi, and the tapped aluminum threads have a stripping factor of about 4.</p>
+          </div>
+        </div>
+
+        <div class="section-header-stack">
+          <span class="eyebrow">03 / Drawings</span>
+          <h2>Dimensioned parts</h2>
+        </div>
+        <figure class="figure-card" style="margin-bottom:28px;">
+          <div class="figure-frame cad-light">
+            <img style="max-height:none;" src="images/pressure-vessel/fig03_vessel_drawing.jpg" alt="Dimensioned drawing of the vessel body with top view, front view, section A-A and isometric">
+          </div>
+          <figcaption class="caption"><strong>Figure 3:</strong> Vessel body drawing (sheet 1 of 2).</figcaption>
+        </figure>
+        <figure class="figure-card" style="margin-bottom:20px;">
+          <div class="figure-frame cad-light">
+            <img style="max-height:none;" src="images/pressure-vessel/fig04_cap_drawing.jpg" alt="Dimensioned drawing of the cap with top view, spigot diameters, section B-B and isometric">
+          </div>
+          <figcaption class="caption"><strong>Figure 4:</strong> Cap drawing (sheet 2 of 2), showing the pressure-side land, groove and release-side land diameters.</figcaption>
+        </figure>
+        <p style="margin-bottom:48px;"><a href="docs/pressure-vessel-drawings.pdf" class="btn btn-sm" target="_blank" rel="noopener">Download Drawings (PDF) &rarr;</a></p>
+
+        <div class="section-header-stack">
+          <span class="eyebrow">04 / Analysis</span>
+          <h2>Key numbers</h2>
+        </div>
+        <div class="table-wrap" style="margin-bottom:40px;">
+          <table class="spec-table">
+            <thead>
+              <tr><th>Check</th><th>Value</th><th>Basis</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Chamber volume</td><td>55.0 cc (55.1 at max bore)</td><td>&pi;/4 &middot; 1.226&sup2; &middot; 2.843</td></tr>
+              <tr><td>O-ring compression</td><td>24.1% nominal, 20.1&ndash;26.6%</td><td>Parker p.22, corrected for stretch thinning</td></tr>
+              <tr><td>O-ring stretch</td><td>3.5% nominal, max 4.8%</td><td>Parker p.8 limit 6%</td></tr>
+              <tr><td>Release-side gap</td><td>.0106" diametral</td><td>Parker Fig. 4.10, 70A at 1000 psi</td></tr>
+              <tr><td>Load on cap</td><td>590 lbf at 500 psi, 1,181 lbf at 1000 psi</td><td>p &middot; &pi;/4 &middot; D&sup2;</td></tr>
+              <tr><td>Screw preload / torque</td><td>400 lbf, 20 lbf&middot;in</td><td>Joint separation factor &asymp; 2 at 500 psi</td></tr>
+              <tr><td>Screw safety (1000 psi, 4 screws)</td><td>3.40 proof / 3.68 yield</td><td>Shigley, C = 1 worst case</td></tr>
+              <tr><td>Wall yield pressure</td><td>&asymp; 12,000 psi</td><td>Thick-wall Lam&eacute;, Tresca</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section-header-stack">
+          <span class="eyebrow">05 / Testing &amp; Results</span>
+          <h2>What happened</h2>
+        </div>
+        <div class="grid-2" style="margin-bottom:40px;">
+          <p>
+            Late in the build we heard that groups with similar designs had not released at 1000
+            psi, so we weakened ours by running two screws instead of four, hoping the unsupported
+            sides of the cap would flex. We also left both parts at the 2.25" stock diameter to save
+            machining time. In testing the vessel held past 1000 psi with no leak and no damage
+            &mdash; it met the pressure-holding and no-metal-failure goals, but did not release.
+          </p>
+          <p>
+            The likely cause is that the release-side gap was still too tight for the ring to
+            extrude. Next time we would open that gap, add fillets at the groove bottom and at the
+            land edge so the ring can roll out more easily, and assemble with the screws snug
+            rather than torqued, since finger-tight testing came closer to the 1000 psi target. We
+            would also add installing the NPT fitting to the assembly procedure.
+          </p>
+        </div>
+
+        <div class="grid-2" style="align-items:start;margin-bottom:48px;">
+          <figure class="figure-card">
+            <div class="figure-frame cad-light">
+              <img src="images/pressure-vessel/fig05_hand_calcs.jpg" alt="Hand calculations for screw preload, joint separation and safety factors">
+            </div>
+            <figcaption class="caption"><strong>Figure 5:</strong> Original hand calculations for the cap screws.</figcaption>
+          </figure>
+          <div class="hairline-cell">
+            <span class="label">Bill of Materials (McMaster-Carr)</span>
+            <ul class="metric-sub" style="margin:10px 0 0;padding-left:18px;">
+              <li>6061 aluminum rod, &Oslash;2-1/4" &times; 12" (8974K75) &mdash; $51.76</li>
+              <li>Buna-N O-rings, -214, pack of 100 (9452K34) &mdash; $9.15</li>
+              <li>1/4-20 &times; 3/4" Grade 5 hex screws, pack of 100 (92865A540) &mdash; $14.34</li>
+              <li><strong>Total: $75.25</strong> of the $100 budget</li>
+            </ul>
+            <p class="metric-sub" style="margin-top:14px;">Team: Lily Zheng, Brady Gouin and Jack Johnston.</p>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag-chip">Pressure Vessel Design</span>
+          <span class="tag-chip">O-Ring Gland Design</span>
+          <span class="tag-chip">Bolted Joint Analysis</span>
+          <span class="tag-chip">Thick-Wall Cylinders</span>
+          <span class="tag-chip">SolidWorks</span>
+          <span class="tag-chip">GD&amp;T &amp; Drawings</span>
+          <span class="tag-chip">Lathe Machining</span>
+          <span class="tag-chip">Team Project</span>
+        </div>
+
+        <div class="project-pagination">
+          <a href="bionic-arm.html" class="pag-link">
+            <span class="label">&larr; Previous Case Study</span>
+            <span class="pag-title">Bionic Arm</span>
+          </a>
+          <a href="projects.html" class="pag-link">
+            <span class="label">Back to Index &rarr;</span>
+            <span class="pag-title">All Projects Overview</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">Jack Johnston</div>
+        <div class="caption" style="margin-top:6px;">
+          Mechanical Engineering &amp; Mathematics &middot; Duke University &rsquo;27 &middot; Durham, NC &amp; Corona del Mar, CA
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">All Projects</a>
+        <a href="tilt-table.html">AD5M Tilt Table</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://github.com/jojcdm" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jack-johnston-b060a22b8" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
