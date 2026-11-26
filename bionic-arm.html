@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bionic Arm — Jack Johnston</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Jack Johnston</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <div class="nav-dropdown">
+          <button type="button" class="nav-link active" data-dropdown-trigger aria-haspopup="true">
+            Portfolio <span class="dropdown-caret">&#9662;</span>
+          </button>
+          <div class="dropdown-menu" role="menu">
+            <a href="projects.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">All Projects Overview</span>
+              <span class="dropdown-sub">Index &amp; Specification Matrix</span>
+            </a>
+            <a href="tilt-table.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">AD5M 3+2-Axis Tilt Table</span>
+              <span class="dropdown-sub">Flagship &middot; Rev. V6 &middot; Klipper</span>
+            </a>
+            <a href="fixture.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Invented Testing Fixture</span>
+              <span class="dropdown-sub">J&amp;J MedTech &middot; INV2508037</span>
+            </a>
+            <a href="bionic-arm.html" class="dropdown-item active" role="menuitem">
+              <span class="dropdown-title">Bionic Arm</span>
+              <span class="dropdown-sub">60+ Parts &middot; 500+ Hours</span>
+            </a>
+            <a href="exoskeleton.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Powered Exoskeleton (suit_v5)</span>
+              <span class="dropdown-sub">Python build123d &middot; Tendon Actuation</span>
+            </a>
+          </div>
+        </div>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" data-theme-toggle>Light</button>
+        <button type="button" class="mobile-menu-btn" data-mobile-toggle>Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-drawer" data-mobile-drawer aria-label="Mobile Navigation">
+    <a href="index.html" class="">Home</a>
+    <a href="experience.html" class="">Experience</a>
+    <a href="projects.html" class="">Portfolio &mdash; All Projects</a>
+    <a href="tilt-table.html" class="sub">AD5M 3+2-Axis Tilt Table</a>
+    <a href="fixture.html" class="sub">Invented Testing Fixture (INV2508037)</a>
+    <a href="bionic-arm.html" class="sub active">Bionic Arm</a>
+    <a href="exoskeleton.html" class="sub">Powered Exoskeleton (suit_v5)</a>
+    <a href="resume.html" class="">Resume</a>
+    <a href="contact.html" class="">Contact</a>
+  </nav>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="projects.html" class="eyebrow">Portfolio</a>
+          <span class="eyebrow">/</span>
+          <span class="eyebrow">Mechanical Design &middot; 2024</span>
+        </div>
+        <h1>Bionic Arm</h1>
+        <p class="lead" style="max-width:740px;margin-top:18px;">
+          A fully mechanical, wrist-activated foam-dart launcher wearable engineered over 500+
+          hours of CAD modeling, tolerance iteration, and multi-part FDM 3D printing across 60+
+          interlocking and interchangeable components.
+        </p>
+
+        <div class="hairline-grid cols-4" style="margin-top:36px;">
+          <div class="hairline-cell"><span class="label">Engineering Effort</span><div class="metric-val">500+ Hours</div><div class="metric-sub">Iterative design &amp; physical testing</div></div>
+          <div class="hairline-cell"><span class="label">Part Count</span><div class="metric-val">60+ Pieces</div><div class="metric-sub">Intricate, interchangeable assembly</div></div>
+          <div class="hairline-cell"><span class="label">Actuation</span><div class="metric-val">Wrist-Driven</div><div class="metric-sub">Purely mechanical trigger linkage</div></div>
+          <div class="hairline-cell"><span class="label">Fabrication</span><div class="metric-val">FDM 3D Print</div><div class="metric-sub">Print-in-place &amp; snap-fit clearances</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div style="margin-bottom:28px;">
+          <figure class="figure-card">
+  <div class="photo-slot ratio-16-9" data-photo-slot="bionic-hero" data-default-src="images/bionic-hero.jpg" data-default-bw="false">
+    <img class="slot-img" alt="Bionic Arm — Complete Wearable Assembly">
+    <div class="slot-placeholder">
+      <span class="eyebrow">Prototype Photo &middot; Hero</span>
+      <div class="slot-title">Bionic Arm — Complete Wearable Assembly</div>
+      <div class="slot-desc">Place images/bionic-hero.jpg in images/ (or drag a photo here) showing the assembled wrist-mounted mechanism.</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  <figcaption class="caption"><strong>Figure 1:</strong> Assembled wrist-activated Bionic Arm prototype integrating 60+ custom-printed parts.</figcaption>
+</figure>
+        </div>
+
+        <div class="grid-2" style="margin-bottom:48px;">
+          <figure class="figure-card">
+  <div class="photo-slot ratio-16-10" data-photo-slot="bionic-detail-1" data-default-src="images/bionic-detail-1.jpg" data-default-bw="false">
+    <img class="slot-img" alt="Internal Trigger &amp; Spring Linkage">
+    <div class="slot-placeholder">
+      <span class="eyebrow">Detail Photo 1</span>
+      <div class="slot-title">Internal Trigger &amp; Spring Linkage</div>
+      <div class="slot-desc">Place images/bionic-detail-1.jpg in images/ showing internal gears, ratchets, or trigger mechanics.</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  <figcaption class="caption"><strong>Figure 2A:</strong> Wrist-actuated mechanical linkage and sear release geometry.</figcaption>
+</figure>
+          <figure class="figure-card">
+  <div class="photo-slot ratio-16-10" data-photo-slot="bionic-detail-2" data-default-src="images/bionic-detail-2.jpg" data-default-bw="false">
+    <img class="slot-img" alt="Exploded / Modular Component Layout">
+    <div class="slot-placeholder">
+      <span class="eyebrow">Detail Photo 2</span>
+      <div class="slot-title">Exploded / Modular Component Layout</div>
+      <div class="slot-desc">Place images/bionic-detail-2.jpg in images/ showing the 60+ modular interchangeable printed parts.</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  <figcaption class="caption"><strong>Figure 2B:</strong> Modular subassemblies designed for rapid part replacement and iteration.</figcaption>
+</figure>
+        </div>
+
+        <div class="section-header-stack">
+          <span class="eyebrow">01 / Engineering Challenge</span>
+          <h2>Compact mechanical packaging on a moving forearm</h2>
+        </div>
+        <div class="grid-2" style="margin-bottom:44px;">
+          <p>
+            Translating natural wrist flexion into reliable mechanical energy release requires tight
+            control over linkage friction, spring retention, ergonomic forearm fit, and part-to-part
+            FDM dimensional repeatability.
+          </p>
+          <p>
+            Rather than relying on monolithic glued shells, I architected the assembly as 60+
+            interchangeable components so worn latches, trigger profiles, and launch barrels could
+            be refined and swapped independently across rapid print-test cycles.
+          </p>
+        </div>
+
+        <div class="section-header-stack">
+          <span class="eyebrow">02 / Mechanical Subsystems</span>
+          <h2>Architecture Breakdown</h2>
+        </div>
+        <div class="hairline-grid cols-3">
+          <div class="hairline-cell">
+            <span class="index-num">01</span>
+            <h3 style="margin:10px 0 8px;">Wrist-Flexion Linkage</h3>
+            <p class="metric-sub">Mechanical transmission converting wrist articulation into crisp trigger actuation without interfering with normal hand movement.</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="index-num">02</span>
+            <h3 style="margin:10px 0 8px;">Modular Shell &amp; Fastening</h3>
+            <p class="metric-sub">Interchangeable 3D-printed subassemblies engineered with controlled print orientations to align tensile load along filament extrusion lines.</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="index-num">03</span>
+            <h3 style="margin:10px 0 8px;">Tolerance Stack Iteration</h3>
+            <p class="metric-sub">Over 500 hours of empirical fit tuning across sliding pins, pivots, and spring guides to achieve smooth, jam-free operation straight off the build plate.</p>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag-chip">SolidWorks &amp; Fusion 360</span>
+          <span class="tag-chip">Multi-Part Mechanical Assemblies</span>
+          <span class="tag-chip">FDM Tolerance Tuning</span>
+          <span class="tag-chip">Ergonomic Mechanism Design</span>
+          <span class="tag-chip">Rapid Prototyping</span>
+        </div>
+
+        <div class="project-pagination">
+          <a href="fixture.html" class="pag-link">
+            <span class="label">&larr; Previous Case Study</span>
+            <span class="pag-title">Invented Testing Fixture (INV2508037)</span>
+          </a>
+          <a href="exoskeleton.html" class="pag-link">
+            <span class="label">Next Case Study &rarr;</span>
+            <span class="pag-title">Powered Exoskeleton (suit_v5)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">Jack Johnston</div>
+        <div class="caption" style="margin-top:6px;">
+          Mechanical Engineering &amp; Mathematics &middot; Duke University &rsquo;27 &middot; Durham, NC &amp; Corona del Mar, CA
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">All Projects</a>
+        <a href="tilt-table.html">AD5M Tilt Table</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://github.com/jojcdm" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jack-johnston-b060a22b8" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Powered Exoskeleton (suit_v5) — Jack Johnston</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Jack Johnston</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <div class="nav-dropdown">
+          <button type="button" class="nav-link active" data-dropdown-trigger aria-haspopup="true">
+            Portfolio <span class="dropdown-caret">&#9662;</span>
+          </button>
+          <div class="dropdown-menu" role="menu">
+            <a href="projects.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">All Projects Overview</span>
+              <span class="dropdown-sub">Index &amp; Specification Matrix</span>
+            </a>
+            <a href="tilt-table.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">AD5M 3+2-Axis Tilt Table</span>
+              <span class="dropdown-sub">Flagship &middot; Rev. V6 &middot; Klipper</span>
+            </a>
+            <a href="fixture.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Invented Testing Fixture</span>
+              <span class="dropdown-sub">J&amp;J MedTech &middot; INV2508037</span>
+            </a>
+            <a href="bionic-arm.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Bionic Arm</span>
+              <span class="dropdown-sub">60+ Parts &middot; 500+ Hours</span>
+            </a>
+            <a href="exoskeleton.html" class="dropdown-item active" role="menuitem">
+              <span class="dropdown-title">Powered Exoskeleton (suit_v5)</span>
+              <span class="dropdown-sub">Python build123d &middot; Tendon Actuation</span>
+            </a>
+          </div>
+        </div>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" data-theme-toggle>Light</button>
+        <button type="button" class="mobile-menu-btn" data-mobile-toggle>Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-drawer" data-mobile-drawer aria-label="Mobile Navigation">
+    <a href="index.html" class="">Home</a>
+    <a href="experience.html" class="">Experience</a>
+    <a href="projects.html" class="">Portfolio &mdash; All Projects</a>
+    <a href="tilt-table.html" class="sub">AD5M 3+2-Axis Tilt Table</a>
+    <a href="fixture.html" class="sub">Invented Testing Fixture (INV2508037)</a>
+    <a href="bionic-arm.html" class="sub">Bionic Arm</a>
+    <a href="exoskeleton.html" class="sub active">Powered Exoskeleton (suit_v5)</a>
+    <a href="resume.html" class="">Resume</a>
+    <a href="contact.html" class="">Contact</a>
+  </nav>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="projects.html" class="eyebrow">Portfolio</a>
+          <span class="eyebrow">/</span>
+          <span class="eyebrow">Parametric Wearable Robotics &middot; 2026 &middot; Active</span>
+        </div>
+        <h1>Powered Exoskeleton (suit_v5)</h1>
+        <p class="lead" style="max-width:760px;margin-top:18px;">
+          A modular, code-driven wearable exoskeleton architecture written in Python with
+          <span class="code-inline">build123d</span>, combining a full-body parametric CAD model,
+          a physical single-arm test rig with 3D-printed tendon routing and wiring harnesses, and an
+          interactive browser-based 3D inspection studio.
+        </p>
+
+        <div class="hairline-grid cols-4" style="margin-top:36px;">
+          <div class="hairline-cell"><span class="label">CAD Kernel</span><div class="metric-val">build123d</div><div class="metric-sub">Modular Python scripts</div></div>
+          <div class="hairline-cell"><span class="label">Transmission</span><div class="metric-val">Tendon Drives</div><div class="metric-sub">Remote mass via printed sheaths</div></div>
+          <div class="hairline-cell"><span class="label">Physical Rig</span><div class="metric-val">Single-Arm</div><div class="metric-sub">Glove, tendons &amp; harness testbed</div></div>
+          <div class="hairline-cell"><span class="label">Visualization</span><div class="metric-val">3D Studio</div><div class="metric-sub">Interactive browser assembly viewer</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div style="margin-bottom:44px;">
+          <figure class="figure-card">
+  <div class="photo-slot ratio-16-9" data-photo-slot="exo-hero" data-default-src="images/exo-hero.jpg" data-default-bw="false">
+    <img class="slot-img" alt="suit_v5 Assembly or Exoskeleton 3D Studio Screenshot">
+    <div class="slot-placeholder">
+      <span class="eyebrow">Hero Render / Prototype Slot</span>
+      <div class="slot-title">suit_v5 Assembly or Exoskeleton 3D Studio Screenshot</div>
+      <div class="slot-desc">Place images/exo-hero.jpg in images/ (or drag a photo/render here) showing the suit_v5 arm rig or 3D Studio view.</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  <figcaption class="caption"><strong>Figure 1:</strong> suit_v5 parametric exoskeleton architecture and interactive 3D studio inspection view.</figcaption>
+</figure>
+        </div>
+
+        <div class="section-header-stack">
+          <span class="eyebrow">01 / Modular Code-to-Hardware Architecture</span>
+          <h2>Parametric Python CAD Pipeline</h2>
+        </div>
+        <div class="svg-panel" style="margin-bottom:32px;">
+          <svg viewBox="0 0 940 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="suit_v5 Python build123d CAD pipeline">
+            <defs>
+              <marker id="arr3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1 L 10 5 L 0 9 z" fill="currentColor"/>
+              </marker>
+            </defs>
+            <g color="var(--text)" font-family="IBM Plex Sans, sans-serif">
+              <rect x="20" y="60" width="165" height="76" stroke="currentColor" stroke-width="1.5" fill="var(--bg)"/>
+              <text x="102" y="92" text-anchor="middle" fill="currentColor" font-size="14" font-weight="500">exolib.py</text>
+              <text x="102" y="112" text-anchor="middle" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">SHARED PRIMITIVES &amp; PARAMS</text>
+
+              <rect x="235" y="20" width="175" height="64" stroke="currentColor" stroke-width="1.25" fill="var(--bg)"/>
+              <text x="322" y="48" text-anchor="middle" fill="currentColor" font-size="13" font-weight="500">build_limbs.py</text>
+              <text x="322" y="66" text-anchor="middle" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">ARM, GLOVE &amp; TENDON PATHS</text>
+
+              <rect x="235" y="112" width="175" height="64" stroke="currentColor" stroke-width="1.25" fill="var(--bg)"/>
+              <text x="322" y="140" text-anchor="middle" fill="currentColor" font-size="13" font-weight="500">build_torso.py</text>
+              <text x="322" y="158" text-anchor="middle" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">CHASSIS &amp; ACTUATOR MOUNTS</text>
+
+              <rect x="460" y="60" width="185" height="76" stroke="currentColor" stroke-width="1.5" fill="var(--bg)"/>
+              <text x="552" y="92" text-anchor="middle" fill="currentColor" font-size="13" font-weight="500">export_hub.py &amp; render.py</text>
+              <text x="552" y="112" text-anchor="middle" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">STL PLATES · EXPLODED VIEWS</text>
+
+              <rect x="698" y="20" width="220" height="64" stroke="currentColor" stroke-width="1.5" fill="var(--bg)"/>
+              <text x="808" y="48" text-anchor="middle" fill="currentColor" font-size="13" font-weight="500">Single-Arm Prototype</text>
+              <text x="808" y="66" text-anchor="middle" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">FDM PARTS · TENDONS · HARNESS</text>
+
+              <rect x="698" y="112" width="220" height="64" stroke="currentColor" stroke-width="1.25" fill="var(--bg)"/>
+              <text x="808" y="140" text-anchor="middle" fill="currentColor" font-size="13" font-weight="500">Exoskeleton 3D Studio</text>
+              <text x="808" y="158" text-anchor="middle" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">INTERACTIVE MANNEQUIN &amp; CORDS</text>
+
+              <path d="M 185 98 L 210 98 M 210 52 L 210 144" stroke="currentColor" stroke-width="1.2"/>
+              <line x1="210" y1="52" x2="233" y2="52" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr3)"/>
+              <line x1="210" y1="144" x2="233" y2="144" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr3)"/>
+
+              <path d="M 410 52 L 435 52 L 435 144 L 410 144 M 435 98 L 458 98" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr3)"/>
+
+              <path d="M 645 98 L 672 98 M 672 52 L 672 144" stroke="currentColor" stroke-width="1.2"/>
+              <line x1="672" y1="52" x2="696" y2="52" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr3)"/>
+              <line x1="672" y1="144" x2="696" y2="144" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr3)"/>
+            </g>
+          </svg>
+        </div>
+
+        <div class="hairline-grid cols-4" style="margin-bottom:44px;">
+          <div class="hairline-cell"><span class="label">exolib.py</span><p class="metric-sub" style="margin-top:8px;">Shared anthropometric constants, joint primitives, fastener seats, and tendon sheath routing helpers.</p></div>
+          <div class="hairline-cell"><span class="label">build_limbs.py</span><p class="metric-sub" style="margin-top:8px;">Generates upper/lower arm shells, articulated finger links, glove anchors, and tendon channels.</p></div>
+          <div class="hairline-cell"><span class="label">build_torso.py</span><p class="metric-sub" style="margin-top:8px;">Parametric torso structural frame and proximal actuator housing to minimize distal limb inertia.</p></div>
+          <div class="hairline-cell"><span class="label">export_hub.py</span><p class="metric-sub" style="margin-top:8px;">Automates watertight STL exports, exploded assembly states, and geometry assets for the 3D Studio.</p></div>
+        </div>
+
+        <div class="section-header-stack">
+          <span class="eyebrow">02 / Single-Arm Prototype &amp; Subsystems</span>
+          <h2>Hardware Bring-Up</h2>
+        </div>
+        <div class="grid-2" style="margin-bottom:32px;">
+          <figure class="figure-card">
+  <div class="photo-slot ratio-16-10" data-photo-slot="exo-detail-1" data-default-src="images/exo-detail-1.jpg" data-default-bw="false">
+    <img class="slot-img" alt="Glove, Finger Links &amp; Tendon Sheaths">
+    <div class="slot-placeholder">
+      <span class="eyebrow">Detail Photo 1</span>
+      <div class="slot-title">Glove, Finger Links &amp; Tendon Sheaths</div>
+      <div class="slot-desc">Place images/exo-detail-1.jpg in images/ showing printed glove mounts and tendon cord routing.</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  <figcaption class="caption"><strong>Figure 2A:</strong> Single-arm test rig glove integration with 3D-printed tendon sheaths.</figcaption>
+</figure>
+          <figure class="figure-card">
+  <div class="photo-slot ratio-16-10" data-photo-slot="exo-detail-2" data-default-src="images/exo-detail-2.jpg" data-default-bw="false">
+    <img class="slot-img" alt="Wiring Harness &amp; Heat-Shrink Terminations">
+    <div class="slot-placeholder">
+      <span class="eyebrow">Detail Photo 2</span>
+      <div class="slot-title">Wiring Harness &amp; Heat-Shrink Terminations</div>
+      <div class="slot-desc">Place images/exo-detail-2.jpg in images/ showing joint-spanning wire harnesses and terminations.</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  <figcaption class="caption"><strong>Figure 2B:</strong> Electrical harness routing across flexing joints with strain-relieved heat-shrink junctions.</figcaption>
+</figure>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag-chip">Python + build123d</span>
+          <span class="tag-chip">Tendon Actuation</span>
+          <span class="tag-chip">Wearable Kinematics</span>
+          <span class="tag-chip">Wiring Harnesses</span>
+          <span class="tag-chip">FDM Prototyping</span>
+          <span class="tag-chip">Interactive 3D Studio</span>
+        </div>
+
+        <div class="project-pagination">
+          <a href="bionic-arm.html" class="pag-link">
+            <span class="label">&larr; Previous Case Study</span>
+            <span class="pag-title">Bionic Arm</span>
+          </a>
+          <a href="tilt-table.html" class="pag-link">
+            <span class="label">Flagship Case Study &rarr;</span>
+            <span class="pag-title">AD5M 3+2-Axis Tilt Table</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">Jack Johnston</div>
+        <div class="caption" style="margin-top:6px;">
+          Mechanical Engineering &amp; Mathematics &middot; Duke University &rsquo;27 &middot; Durham, NC &amp; Corona del Mar, CA
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">All Projects</a>
+        <a href="tilt-table.html">AD5M Tilt Table</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://github.com/jojcdm" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jack-johnston-b060a22b8" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AD5M 3+2-Axis Tilt Table — Jack Johnston</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Jack Johnston</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <div class="nav-dropdown">
+          <button type="button" class="nav-link active" data-dropdown-trigger aria-haspopup="true">
+            Portfolio <span class="dropdown-caret">&#9662;</span>
+          </button>
+          <div class="dropdown-menu" role="menu">
+            <a href="projects.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">All Projects Overview</span>
+              <span class="dropdown-sub">Index &amp; Specification Matrix</span>
+            </a>
+            <a href="tilt-table.html" class="dropdown-item active" role="menuitem">
+              <span class="dropdown-title">AD5M 3+2-Axis Tilt Table</span>
+              <span class="dropdown-sub">Flagship &middot; Rev. V6 &middot; Klipper</span>
+            </a>
+            <a href="fixture.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Invented Testing Fixture</span>
+              <span class="dropdown-sub">J&amp;J MedTech &middot; INV2508037</span>
+            </a>
+            <a href="bionic-arm.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Bionic Arm</span>
+              <span class="dropdown-sub">60+ Parts &middot; 500+ Hours</span>
+            </a>
+            <a href="exoskeleton.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Powered Exoskeleton (suit_v5)</span>
+              <span class="dropdown-sub">Python build123d &middot; Tendon Actuation</span>
+            </a>
+          </div>
+        </div>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" data-theme-toggle>Light</button>
+        <button type="button" class="mobile-menu-btn" data-mobile-toggle>Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-drawer" data-mobile-drawer aria-label="Mobile Navigation">
+    <a href="index.html" class="">Home</a>
+    <a href="experience.html" class="">Experience</a>
+    <a href="projects.html" class="">Portfolio &mdash; All Projects</a>
+    <a href="tilt-table.html" class="sub active">AD5M 3+2-Axis Tilt Table</a>
+    <a href="fixture.html" class="sub">Invented Testing Fixture (INV2508037)</a>
+    <a href="bionic-arm.html" class="sub">Bionic Arm</a>
+    <a href="exoskeleton.html" class="sub">Powered Exoskeleton (suit_v5)</a>
+    <a href="resume.html" class="">Resume</a>
+    <a href="contact.html" class="">Contact</a>
+  </nav>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="projects.html" class="eyebrow">Portfolio</a>
+          <span class="eyebrow">/</span>
+          <span class="eyebrow">AD5M 3+2-Axis Tilt Table &middot; Rev. V6 &middot; Oct&ndash;Nov 2026</span>
+        </div>
+        <h1>AD5M 3+2-Axis Tilt Table</h1>
+        <p class="lead" style="max-width:760px;margin-top:18px;">
+          A bolt-on two-axis tilting and rotating print bed that turns a consumer Flashforge
+          Adventurer 5M into a 3+2-axis printer, allowing layers to follow part geometry rather
+          than always lying flat. Six design revisions, two control systems, one rooted printer.
+        </p>
+
+        <div class="hairline-grid cols-4" style="margin-top:36px;">
+          <div class="hairline-cell"><span class="label">Tilt Range</span><div class="metric-val">+5&deg; to &minus;95&deg;</div><div class="metric-sub">Axis B, belt-driven trunnion</div></div>
+          <div class="hairline-cell"><span class="label">Spin Range</span><div class="metric-val">360&deg;</div><div class="metric-sub">Axis A, continuous rotation</div></div>
+          <div class="hairline-cell"><span class="label">Resolution</span><div class="metric-val">0.011&deg;</div><div class="metric-sub">5:1 GT2 belts, 1/32 microstep, 88.9 steps/deg</div></div>
+          <div class="hairline-cell"><span class="label">Print Plate</span><div class="metric-val">&Oslash;200 mm</div><div class="metric-sub">Tilt axis 105 mm above bed</div></div>
+          <div class="hairline-cell"><span class="label">Tilting Mass</span><div class="metric-val">1.11 kg</div><div class="metric-sub">Centre of mass 34 mm below axis (CAD)</div></div>
+          <div class="hairline-cell"><span class="label">Revisions</span><div class="metric-val">6</div><div class="metric-sub">All-printed mock-up (V1&ndash;V2) to V6</div></div>
+          <div class="hairline-cell"><span class="label">Controller</span><div class="metric-val">SKR mini E3 V2</div><div class="metric-sub">Klipper, TMC2209, software current</div></div>
+          <div class="hairline-cell"><span class="label">CAD Workflow</span><div class="metric-val">Code-Based</div><div class="metric-sub">Python + manifold3d, automated checks</div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="jump-bar">
+      <div class="container jump-bar-inner">
+        <a href="#sec-00" class="jump-link active">00 Status</a>
+        <a href="#sec-01" class="jump-link">01 Goal</a>
+        <a href="#sec-02" class="jump-link">02 System</a>
+        <a href="#sec-03" class="jump-link">03 Mechanics</a>
+        <a href="#sec-04" class="jump-link">04 Evolution</a>
+        <a href="#sec-05" class="jump-link">05 Case Studies</a>
+        <a href="#sec-06" class="jump-link">06 Electronics</a>
+        <a href="#sec-07" class="jump-link">07 Software</a>
+        <a href="#sec-08" class="jump-link">08 Printer</a>
+        <a href="#sec-09" class="jump-link">09 Next Steps</a>
+        <a href="#sec-10" class="jump-link">10 Reflection</a>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header-stack">
+          <span class="eyebrow">Hardware Documentation &middot; Standalone Prototype</span>
+          <h2>CAD Hero &amp; Standalone Bench Prototype</h2>
+        </div>
+        <div class="grid-2" style="align-items:start;">
+          <figure class="figure-card">
+            <div class="figure-frame cad-light">
+              <img src="images/tilt-table/fig01_v51_cad_tilt_hero.jpg" alt="V5.1 CAD model at -60 deg tilt">
+            </div>
+            <figcaption class="caption"><strong>Figure 1 &mdash; V5.1 CAD at &minus;60&deg; Tilt:</strong> Orange is printed PETG, grey is off-the-shelf hardware, red is the routed wiring harness. Full clearance confirmed.</figcaption>
+          </figure>
+          <div>
+            <figure class="figure-card">
+  <div class="photo-slot ratio-4-3" data-photo-slot="proto-alone" data-default-src="images/prototype-alone.jpg" data-default-bw="false">
+    <img class="slot-img" alt="Current Prototype — Standalone Bench Assembly">
+    <div class="slot-placeholder">
+      <span class="eyebrow">Photo Slot A &middot; Prototype Alone (Hero)</span>
+      <div class="slot-title">Current Prototype — Standalone Bench Assembly</div>
+      <div class="slot-desc">Place images/prototype-alone.jpg in your repo folder (or drag a photo here to preview). 3/4 view showing PETG uprights, yoke, Ø200 mm plate, and belts.</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  <figcaption class="caption"><strong>Figure 2 &mdash; Current Prototype Alone:</strong> Standalone bench assembly on the 232 mm test board prior to printer mounting.</figcaption>
+</figure>
+          </div>
+        </div>
+        <div class="grid-2" style="margin-top:28px;">
+          <figure class="figure-card">
+  <div class="photo-slot ratio-16-10" data-photo-slot="proto-alone-belt" data-default-src="images/prototype-alone-belt.jpg" data-default-bw="false">
+    <img class="slot-img" alt="Belt Drive, 80T Pulley &amp; V5 Clamping Collars">
+    <div class="slot-placeholder">
+      <span class="eyebrow">Photo Slot B1 &middot; Standalone Detail</span>
+      <div class="slot-title">Belt Drive, 80T Pulley &amp; V5 Clamping Collars</div>
+      <div class="slot-desc">Place images/prototype-alone-belt.jpg in images/ showing the 5:1 GT2 drive and V5 two-screw split collars.</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  <figcaption class="caption"><strong>Figure 2A:</strong> Right upright 5:1 GT2 belt drive (16T to 80T) and V5 relief-gap clamping collars on the M10 rods.</figcaption>
+</figure>
+          <figure class="figure-card">
+  <div class="photo-slot ratio-16-10" data-photo-slot="proto-alone-sensors" data-default-src="images/prototype-alone-sensors.jpg" data-default-bw="false">
+    <img class="slot-img" alt="Optical Home Sensors, Flags &amp; 60 mm Cable Loop">
+    <div class="slot-placeholder">
+      <span class="eyebrow">Photo Slot B2 &middot; Standalone Detail</span>
+      <div class="slot-title">Optical Home Sensors, Flags &amp; 60 mm Cable Loop</div>
+      <div class="slot-desc">Place images/prototype-alone-sensors.jpg in images/ showing optical slot sensors and tilt-axis harness loop.</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  <figcaption class="caption"><strong>Figure 2B:</strong> Left upright optical home sensor alignment, extended spin flag, and V5.1 60 mm cable loop.</figcaption>
+</figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-00" class="section">
+      <div class="container">
+        <div class="section-header-stack">
+          <span class="eyebrow">00 / Where It Stands</span>
+          <h2>Verification Status at a Glance</h2>
+          <p class="metric-sub" style="margin-top:8px;">Explicit separation between built and physically tested hardware, CAD-verified geometry, and remaining printer integration work (as of 25 November 2026).</p>
+        </div>
+        <div class="hairline-grid cols-3">
+          <div class="hairline-cell">
+            <span class="label" style="color:var(--text);">Built and Tested</span>
+            <ul class="clean-list" style="font-size:14px;">
+              <li>V4, then V5.1 revision printed in PETG and assembled on a 232 mm test board.</li>
+              <li>Both axes driven on the bench &mdash; first from a Raspberry Pi 5 + CNC Shield, then from an SKR mini E3 V2 running Klipper.</li>
+              <li>Both optical home sensors read correctly, motion directions are verified, and the <span class="code-inline">HOME_AB</span> macro homes both axes.</li>
+              <li>12 V cooling fan running from the SKR board&rsquo;s fan output.</li>
+              <li>Flashforge AD5M rooted with Forge-X (Klipper) and tuned: 11&times;11 bed mesh, input shaping, pressure advance, and volumetric flow.</li>
+            </ul>
+          </div>
+          <div class="hairline-cell">
+            <span class="label" style="color:var(--text);">Designed &amp; Checked in CAD</span>
+            <ul class="clean-list" style="font-size:14px;">
+              <li>Every revision verified before printing by collision sweeps and scripted measurements on exported STLs (42 checks for V5, 46 for V5.1).</li>
+              <li>V6: slotted tilt-sensor bracket (14/14 checks), upright tray for the SKR board (18/18 checks, 0 audit fails), and 40 mm tilt motor clearance swap.</li>
+              <li>Skipped-step detection macros, 52-touch nozzle probe calibration routine, and Fractal Cortex G-code converter (unit tests pass).</li>
+            </ul>
+          </div>
+          <div class="hairline-cell">
+            <span class="label" style="color:var(--muted);">Not Done Yet</span>
+            <ul class="clean-list" style="font-size:14px;">
+              <li>Fix the &minus;3&deg; nose-down homing offset on the tilt axis and store true level via <span class="code-inline">TT_SET_LEVEL</span>.</li>
+              <li>Mount the table in the AD5M and connect the SKR mini E3 V2 to the printer&rsquo;s USB port.</li>
+              <li>Run physical geometry calibration with the 52-touch nozzle probe routine.</li>
+              <li>Complete first cold air run, followed by the first real 3+2-axis support-free print.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-01" class="section">
+      <div class="container">
+        <div class="section-header-stack">
+          <span class="eyebrow">01 / Problem and Goal</span>
+          <h2>Why tilt the bed?</h2>
+        </div>
+        <div class="grid-2" style="margin-bottom:36px;">
+          <p>
+            A conventional 3D printer stacks flat planar layers. Anything that protrudes sideways
+            demands sacrificial support material, and every part is weakest across its layer lines.
+            Tilting and spinning the print bed allows features to be built on their side or layers
+            to wrap around geometry &mdash; eliminating overhang supports while aligning layer
+            strength with the load path.
+          </p>
+          <p>
+            Open-source slicers such as Fractal Cortex can already generate 5-axis toolpaths, but
+            accessible bolt-on hardware was missing for a consumer printer I already owned: the
+            Flashforge Adventurer 5M (~$300, fast enclosed CoreXY, closed stock firmware). The goal
+            was a reversible clamp-on table adding two rotary axes with zero permanent printer modifications.
+          </p>
+        </div>
+        <div class="table-wrap">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th>Requirement</th>
+                <th>Why It Matters</th>
+                <th>How the Design Meets It</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Fits inside 220 mm cube build volume</td>
+                <td>The table eats into usable Z print height</td>
+                <td>Plate sits 105 mm above the bed, preserving 115 mm print height above the plate</td>
+              </tr>
+              <tr>
+                <td>Full &Oslash;200 mm plate clears at every angle</td>
+                <td>A crash damages the table or printer gantry</td>
+                <td>Automated collision sweep across full tilt range at four spin angles on every revision</td>
+              </tr>
+              <tr>
+                <td>Repeatable home position</td>
+                <td>Every subsequent move is relative to home</td>
+                <td>Optical slot sensors on both axes triggered by rigid flags on the moving parts</td>
+              </tr>
+              <tr>
+                <td>0.1 mm class accuracy at the nozzle</td>
+                <td>Layers on tilted surfaces must register cleanly</td>
+                <td>5:1 GT2 belt reduction, bearing preload, crush-rib seats, 52-touch probe calibration</td>
+              </tr>
+              <tr>
+                <td>No permanent printer modification</td>
+                <td>Printer must still operate normally without table</td>
+                <td>Uprights clamp onto bed edge; electronics connect via USB only</td>
+              </tr>
+              <tr>
+                <td>Low cost, printable on the same printer</td>
+                <td>Student budget and single-printer fabrication</td>
+                <td>All structure in PETG; off-the-shelf 608 bearings, GT2 belts, and M10 threaded rod</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-02" class="section">
+      <div class="container">
+        <div class="section-header-stack">
+          <span class="eyebrow">02 / System Architecture</span>
+          <h2>How the pieces fit together</h2>
+          <p class="metric-sub" style="margin-top:8px;">Solid path shows the target on-printer pipeline; dashed path shows the current bench host setup.</p>
+        </div>
+        <div class="svg-panel">
+          <svg viewBox="0 0 980 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AD5M Tilt Table System Architecture Diagram">
+            <defs>
+              <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1 L 10 5 L 0 9 z" fill="currentColor"/>
+              </marker>
+            </defs>
+            <g color="var(--text)" font-family="IBM Plex Sans, sans-serif">
+              <line x1="24" y1="24" x2="64" y2="24" stroke="currentColor" stroke-width="1.5"/>
+              <text x="74" y="28" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1.5">TARGET ON-PRINTER PIPELINE</text>
+              <line x1="270" y1="24" x2="310" y2="24" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="5 4"/>
+              <text x="320" y="28" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1.5">BENCH TESTING TODAY</text>
+
+              <!-- Boxes -->
+              <rect x="24" y="72" width="150" height="72" stroke="currentColor" stroke-width="1.25" fill="var(--bg)"/>
+              <text x="99" y="103" text-anchor="middle" fill="currentColor" font-size="14" font-weight="500">Fractal Cortex</text>
+              <text x="99" y="123" text-anchor="middle" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">5-AXIS SLICER</text>
+
+              <rect x="206" y="72" width="176" height="72" stroke="currentColor" stroke-width="1.75" fill="var(--bg)"/>
+              <text x="294" y="103" text-anchor="middle" fill="currentColor" font-size="14" font-weight="500">fractal_to_5m.py</text>
+              <text x="294" y="123" text-anchor="middle" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="0.8">GEOMETRY · SAFE MOVES · CHECKS</text>
+
+              <rect x="414" y="72" width="160" height="72" stroke="currentColor" stroke-width="1.25" fill="var(--bg)"/>
+              <text x="494" y="103" text-anchor="middle" fill="currentColor" font-size="14" font-weight="500">AD5M + Forge-X</text>
+              <text x="494" y="123" text-anchor="middle" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">KLIPPER HOST · X / Y / Z</text>
+
+              <rect x="614" y="72" width="164" height="72" stroke="currentColor" stroke-width="1.75" fill="var(--bg)"/>
+              <text x="696" y="103" text-anchor="middle" fill="currentColor" font-size="14" font-weight="500">SKR mini E3 V2</text>
+              <text x="696" y="123" text-anchor="middle" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">2ND MCU · TMC2209</text>
+
+              <!-- Bench Pi 5 -->
+              <rect x="414" y="186" width="160" height="66" stroke="var(--muted)" stroke-width="1.25" stroke-dasharray="5 4" fill="var(--bg)"/>
+              <text x="494" y="215" text-anchor="middle" fill="currentColor" font-size="13" font-weight="500">Raspberry Pi 5</text>
+              <text x="494" y="233" text-anchor="middle" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="0.8">BENCH HOST · KLIPPER + FLUIDD</text>
+
+              <!-- Outputs -->
+              <rect x="826" y="34" width="132" height="44" stroke="currentColor" stroke-width="1.1" fill="var(--bg)"/>
+              <text x="892" y="54" text-anchor="middle" fill="currentColor" font-size="12" font-weight="500">Spin Motor</text>
+              <text x="892" y="69" text-anchor="middle" fill="var(--muted)" font-size="10" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">AXIS A · XM</text>
+
+              <rect x="826" y="92" width="132" height="44" stroke="currentColor" stroke-width="1.1" fill="var(--bg)"/>
+              <text x="892" y="112" text-anchor="middle" fill="currentColor" font-size="12" font-weight="500">Tilt Motor</text>
+              <text x="892" y="127" text-anchor="middle" fill="var(--muted)" font-size="10" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">AXIS B · YM</text>
+
+              <rect x="826" y="150" width="132" height="44" stroke="currentColor" stroke-width="1.1" fill="var(--bg)"/>
+              <text x="892" y="170" text-anchor="middle" fill="currentColor" font-size="12" font-weight="500">2 Home Sensors</text>
+              <text x="892" y="185" text-anchor="middle" fill="var(--muted)" font-size="10" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">OPTICAL · 3.3 V</text>
+
+              <rect x="826" y="208" width="132" height="44" stroke="currentColor" stroke-width="1.1" fill="var(--bg)"/>
+              <text x="892" y="228" text-anchor="middle" fill="currentColor" font-size="12" font-weight="500">12 V Cooling Fan</text>
+              <text x="892" y="243" text-anchor="middle" fill="var(--muted)" font-size="10" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">BOARD FAN OUT</text>
+
+              <!-- Arrows -->
+              <line x1="174" y1="108" x2="204" y2="108" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+              <line x1="382" y1="108" x2="412" y2="108" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+              <line x1="574" y1="108" x2="612" y2="108" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+              <text x="593" y="99" text-anchor="middle" fill="var(--muted)" font-size="10" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">USB</text>
+
+              <path d="M 574 219 L 696 219 L 696 146" stroke="var(--muted)" stroke-width="1.3" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+
+              <path d="M 778 108 L 802 108 M 802 56 L 802 230" stroke="currentColor" stroke-width="1.2"/>
+              <line x1="802" y1="56" x2="824" y2="56" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+              <line x1="802" y1="114" x2="824" y2="114" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+              <line x1="802" y1="172" x2="824" y2="172" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+              <line x1="802" y1="230" x2="824" y2="230" stroke="currentColor" stroke-width="1.2" marker-end="url(#arr)"/>
+
+              <text x="24" y="196" fill="var(--muted)" font-size="12">Fractal Cortex writes A (spin) &amp; B (tilt) with X/Y/Z.</text>
+              <text x="24" y="216" fill="var(--muted)" font-size="12">Converter mirrors tilts away from gantry, parks nozzle</text>
+              <text x="24" y="236" fill="var(--muted)" font-size="12">before rotations, and calls TT_VERIFY to catch skips.</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-03" class="section">
+      <div class="container">
+        <div class="section-header-stack">
+          <span class="eyebrow">03 / Mechanical Design</span>
+          <h2>A trunnion table built from printed parts and hardware-store steel</h2>
+        </div>
+        <div class="grid-2" style="align-items:center;margin-bottom:36px;">
+          <div>
+            <p>
+              Two printed PETG uprights clamp onto the bed and carry the tilt axis on 608 skateboard
+              bearings. A yoke of two arms on M10 threaded steel rods swings between them and carries
+              a central hub, which supports the &Oslash;200 mm spinning plate on a second pair of 608
+              bearings. Each axis is driven by a NEMA 17 stepper and a 5:1 GT2 belt (16-tooth to
+              80-tooth pulleys).
+            </p>
+            <p>
+              <strong>The Golden Bearing Load-Path Rule:</strong> Everything that turns presses strictly
+              on a bearing&rsquo;s inner ring through an 11.4 mm OD spacer; every printed seat touches
+              only the outer ring. That single rule determined exact spacer heights (4.2, 5.8, and
+              1.2 mm plus spares) and a spin-axle nut preload of 1/8 turn past &ldquo;no play.&rdquo;
+            </p>
+            <div class="hairline-cell surface" style="border:1px solid var(--line);margin-top:20px;">
+              <span class="label">FDM Design for Manufacture</span>
+              <p class="metric-sub" style="margin-top:8px;">
+                Every structural part prints directly on the AD5M without supports in PETG at 6 walls
+                and 40% gyroid infill (Plate 1 ~193 g, Plate 2 ~198 g, &Oslash;200 mm plate ~193 g,
+                key/spacers/fit-coupon plate ~20 g).
+              </p>
+            </div>
+          </div>
+          <figure class="figure-card">
+            <div class="figure-frame cad-light">
+              <img src="images/tilt-table/fig02_v4_cad_full_build.jpg" alt="V4 full build CAD on 232 mm test board">
+            </div>
+            <figcaption class="caption"><strong>Figure 3 &mdash; V4 Full Build CAD:</strong> First complete hardware build shown on the 232 mm test board that stands in for the AD5M bed.</figcaption>
+          </figure>
+        </div>
+
+        <figure class="figure-card" style="margin-bottom:32px;">
+          <div class="figure-frame cad-light">
+            <img src="images/tilt-table/fig03_axle_stacks_cutaway.jpg" alt="Cutaway diagram of the three axle stacks">
+          </div>
+          <figcaption class="caption"><strong>Figure 4 &mdash; Three Axle Bearing Stack-Ups:</strong> Cutaway from the assembly guide. Orange = printed PETG, grey = bought steel/pulley hardware. Spin axle (1&ndash;12), right tilt drive axle (1&ndash;9), and left tilt home-flag axle (1&ndash;9).</figcaption>
+        </figure>
+
+        <figure class="figure-card">
+          <div class="figure-frame cad-light">
+            <img src="images/tilt-table/fig04_v4_print_plates.jpg" alt="V4 support-free print plates layout">
+          </div>
+          <figcaption class="caption"><strong>Figure 5 &mdash; Support-Free Print Plates (V4):</strong> Script-generated print layouts sized to the AD5M 220 mm build volume, including the 20 g fit-coupon and spacer plate.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="sec-04" class="section">
+      <div class="container">
+        <div class="section-header-stack">
+          <span class="eyebrow">04 / Design Evolution</span>
+          <h2>Six revisions, each driven by something that failed</h2>
+        </div>
+
+        <div class="filter-bar" data-filter-group=".rev-item">
+          <button type="button" class="filter-btn active" data-filter="all">All 6 Revisions</button>
+          <button type="button" class="filter-btn" data-filter="built">Built on Bench (V4, V5, V5.1)</button>
+          <button type="button" class="filter-btn" data-filter="cad">Concept / CAD (V1&ndash;V3, V6)</button>
+        </div>
+
+        <div class="timeline-row rev-item" data-category="cad">
+          <div>
+            <span class="eyebrow">V1&ndash;V2 &middot; Oct 2026 &middot; Mock-Up</span>
+            <h3 style="margin-top:8px;">Proof of Concept</h3>
+          </div>
+          <div>
+            <p>All-printed mock-up with printed stand-in bearings, pulleys, rods, and TPU belts so kinematics could be turned by hand before buying hardware. Tilt axis sat 95 mm above the bed.</p>
+            <p class="metric-sub"><strong>Problem:</strong> At 95 mm the full &Oslash;200 mm plate hit the bed when tilted, forcing a multi-piece core with four removable &ldquo;leaves&rdquo; requiring mid-print pauses.</p>
+          </div>
+        </div>
+
+        <div class="timeline-row rev-item" data-category="cad">
+          <div>
+            <span class="eyebrow">V3 &middot; 21 Oct 2026 &middot; CAD Verified</span>
+            <h3 style="margin-top:8px;">Raise the Axis</h3>
+          </div>
+          <div class="grid-2" style="align-items:center;">
+            <div>
+              <p>Raised the tilt axis to 105 mm above the bed and replaced printed structural rods with M10 threaded steel rod.</p>
+              <p class="metric-sub"><strong>Trade-Off:</strong> Traded 10 mm of Z print height (115 mm left above plate) for zero removable leaves and zero pauses. Plate clears bed and base rods at all tilt and spin angles with motors, pulleys, and belts modeled.</p>
+            </div>
+            <figure class="figure-card">
+              <div class="figure-frame cad-light">
+                <img src="images/tilt-table/fig05_v3_full_tilt.jpg" alt="V3 at full tilt with plate vertical">
+              </div>
+              <figcaption class="caption"><strong>Figure 6:</strong> V3 at full tilt with the &Oslash;200 mm plate vertical.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="timeline-row rev-item" data-category="built">
+          <div>
+            <span class="eyebrow">V4 &middot; Late Oct 2026 &middot; Built</span>
+            <h3 style="margin-top:8px;">First Complete Build</h3>
+          </div>
+          <div class="grid-2" style="align-items:center;">
+            <div>
+              <p>Real 608 bearings, GT2 belts, aluminum pulleys, and NEMA 17 motors; full illustrated assembly guide, labelled spacer plate, parts checklist, and bench-test software.</p>
+              <p class="metric-sub"><strong>Failed on Build:</strong> Arm collars did not grip their M10 rods (Case Study A). Spin home flag missed its optical sensor by ~2 cm despite 6 mm nominal CAD overlap (Case Study B).</p>
+            </div>
+            <figure class="figure-card">
+              <div class="figure-frame cad-light">
+                <img src="images/tilt-table/fig06_v4_arm_collar.jpg" alt="V4 arm collar assembled and exploded">
+              </div>
+              <figcaption class="caption"><strong>Figure 7:</strong> V4 arm collar where the slit only went through the top half.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="timeline-row rev-item" data-category="built">
+          <div>
+            <span class="eyebrow">V5 &middot; 2 Nov 2026 &middot; Built</span>
+            <h3 style="margin-top:8px;">Fix What the Build Exposed</h3>
+          </div>
+          <div class="grid-2" style="align-items:center;">
+            <div>
+              <p>Six parts changed and two added (V4 uprights, spacers, and bearings carried over). Clamping collars with relief gaps, blind trapped rod pockets, a 20 mm longer spin flag on a new bolt-on sensor arm, and a hub centred to &plusmn;0.10 mm by four printed sleeves.</p>
+              <p class="metric-sub"><strong>Evidence:</strong> Collision audit 0 fails; 42/42 dimensional mesh checks pass. Added a 24 g &ldquo;fit coupon&rdquo; plate printed first to test hole tolerances on the real printer.</p>
+            </div>
+            <figure class="figure-card">
+              <div class="figure-frame cad-light">
+                <img src="images/tilt-table/fig07_v5_collar_and_flag.jpg" alt="V5 collar with relief gap, sleeve section, and spin flag in sensor slot">
+              </div>
+              <figcaption class="caption"><strong>Figure 8:</strong> V5 collar relief gap, centering sleeve section, and new spin flag 3 mm into the optical slot.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="timeline-row rev-item" data-category="built">
+          <div>
+            <span class="eyebrow">V5.1 &middot; 2 Nov 2026 &middot; Built</span>
+            <h3 style="margin-top:8px;">Electronics &amp; Cable Management</h3>
+          </div>
+          <div class="grid-2" style="align-items:center;">
+            <div>
+              <p>Loose wires caused most bench faults, so V5.1 mapped the yoke&rsquo;s swept volume and placed a front electronics tray with 40 mm clearance from moving parts (hooking cleanly onto the front base rod with no new holes), upright wire ducts, and a 60 mm tilt-axis cable loop.</p>
+              <p class="metric-sub"><strong>Evidence:</strong> 46/46 mesh checks pass. Built the same evening; both axes then moved smoothly together on the bench.</p>
+            </div>
+            <figure class="figure-card">
+              <div class="figure-frame cad-light">
+                <img src="images/tilt-table/fig08_v51_electronics_tray.jpg" alt="V5.1 front electronics tray with CNC Shield, drivers, and 40 mm fan">
+              </div>
+              <figcaption class="caption"><strong>Figure 9:</strong> V5.1 front tray holding CNC Shield, driver heatsink block, Pico, and 40 mm fan.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="timeline-row rev-item" data-category="cad">
+          <div>
+            <span class="eyebrow">V6 &middot; 10&ndash;18 Nov 2026 &middot; Bench &amp; CAD</span>
+            <h3 style="margin-top:8px;">Integrated Electronics, Torque &amp; Homing</h3>
+          </div>
+          <div class="grid-2" style="align-items:center;">
+            <div>
+              <p>System-wide design review set the V6 scope: replace the shield with one integrated SKR mini E3 V2 board (Case Study D), upsize the tilt motor from torque math (Case Study C), add an adjustable slotted tilt-sensor bracket, and detect skipped steps mid-print.</p>
+              <p class="metric-sub"><strong>Evidence:</strong> SKR board flashed and running on bench. Upright SKR tray: audit 0 fails, 18/18 checks. Slotted sensor bracket: 14/14 checks. Queued for printing.</p>
+            </div>
+            <figure class="figure-card">
+              <div class="figure-frame cad-light">
+                <img src="images/tilt-table/fig09_v6_skr_tray.jpg" alt="V6 upright SKR mini E3 board tray">
+              </div>
+              <figcaption class="caption"><strong>Figure 10:</strong> V6 tray holding the SKR mini E3 V2 upright with connectors facing forward.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-05" class="section">
+      <div class="container">
+        <div class="section-header-stack">
+          <span class="eyebrow">05 / Case Studies</span>
+          <h2>Four problems traced to root cause</h2>
+        </div>
+
+        <div class="hairline-grid cols-2">
+          <div class="hairline-cell">
+            <span class="label">Case Study A &middot; Fixed in V5 (Built)</span>
+            <h3 style="margin:10px 0 12px;">Collars That Could Not Clamp</h3>
+            <p class="metric-sub"><strong>Symptom:</strong> Tightening the M4 pinch screw did not stop yoke arms sliding and rocking on M10 rods.</p>
+            <p class="metric-sub" style="margin-top:8px;"><strong>Root Cause:</strong> The rod bore was 0.5 mm oversize, requiring ~1.6 mm of slit closure to grip. The V4 slit was only 1.5 mm wide and cut through the top half only &mdash; bottoming out before gripping while the solid lower half resisted closing.</p>
+            <p class="metric-sub" style="margin-top:8px;"><strong>Fix:</strong> Interim locknuts and shims, then V5 redesign: 10.2 mm bore, 2 mm full-length slit, 1.6 mm relief gap freeing the jaw from the arm face, 2&times; M4 screws per collar, and blind outer rod pockets.</p>
+            <figure class="figure-card" style="margin-top:18px;">
+              <div class="figure-frame cad-light">
+                <img src="images/tilt-table/fig10_v5_collar_detail.jpg" alt="V5 right arm collar hub side and upright side">
+              </div>
+              <figcaption class="caption"><strong>Figure 11:</strong> V5 collar from hub side (relief gap, 2 mm slit, two screw holes) and upright side (sunk nut pockets, blind rod cap).</figcaption>
+            </figure>
+          </div>
+
+          <div class="hairline-cell">
+            <span class="label">Case Study B &middot; Fixed in V5 (Built)</span>
+            <h3 style="margin:10px 0 12px;">A Home Flag That Missed Its Sensor</h3>
+            <p class="metric-sub"><strong>Symptom:</strong> On the built V4, the spin home flag passed ~2 cm away from the optical sensor slot even though CAD showed 6 mm of overlap.</p>
+            <p class="metric-sub" style="margin-top:8px;"><strong>Root Cause:</strong> Header pins and solder joints held the sensor PCB off its assumed CAD seat, and the flag had zero margin. Simply lengthening the flag in place would have collided with the spin motor on every revolution.</p>
+            <p class="metric-sub" style="margin-top:8px;"><strong>Fix:</strong> Lengthened flag by 20 mm and relocated it to an 84 mm radius (clearing the motor&rsquo;s far corner at 77.3 mm). A new bolt-on sensor arm adds an open pin clearance window under the PCB and &plusmn;1.5 mm adjustment slots.</p>
+          </div>
+
+          <div class="hairline-cell">
+            <span class="label">Case Study C &middot; Calculated &middot; Motor Swap Recommended</span>
+            <h3 style="margin:10px 0 12px;">Is the Tilt Motor Strong Enough?</h3>
+            <p class="metric-sub"><strong>Symptom:</strong> Tilt motion was jerky under load; raising driver current made the DRV8825 scalding hot without solving it.</p>
+            <p class="metric-sub" style="margin-top:8px;"><strong>Analysis:</strong> Tilting mass is 1.11 kg with centre of mass 34 mm below the axis, so gravity torque at 90&deg; is 1.11 &times; 9.81 &times; 0.034 &approx; 0.37 N&middot;m (0.43 N&middot;m budgeted). Through the 5:1 belt, the thin pancake 17HS08 gives only ~1.5&times; margin.</p>
+            <p class="metric-sub" style="margin-top:8px;"><strong>Decision:</strong> A 40 mm NEMA 17 fits the same four mounting holes and provides 2.0 N&middot;m (4.6&times;). Collision sweep cleared 40 mm and 48 mm bodies; 60 mm hits.</p>
+            <div class="bar-group">
+              <div>
+                <div class="bar-row-head"><span>Gravity Load at 90&deg; (Budgeted)</span><span>0.43 N&middot;m (1.0&times;)</span></div>
+                <div class="bar-track"><div class="bar-fill muted" style="width:21.5%;"></div></div>
+              </div>
+              <div>
+                <div class="bar-row-head"><span>Pancake 17HS08 (Current, 5:1 belt)</span><span>0.64 N&middot;m (1.5&times;)</span></div>
+                <div class="bar-track"><div class="bar-fill muted" style="width:32%;"></div></div>
+              </div>
+              <div>
+                <div class="bar-row-head"><span>40 mm NEMA 17 (V6 Upgrade, 5:1 belt)</span><span>2.00 N&middot;m (4.6&times;)</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div>
+              </div>
+            </div>
+            <div class="caption">Catalogue holding torque &times; 5:1 GT2 reduction (not directly dynamometer measured).</div>
+          </div>
+
+          <div class="hairline-cell">
+            <span class="label">Case Study D &middot; Solved on the Bench</span>
+            <h3 style="margin:10px 0 12px;">&ldquo;The Motors Don&rsquo;t Move&rdquo;</h3>
+            <p class="metric-sub"><strong>Symptom:</strong> One motor clicked, the other did nothing, and both shafts turned freely by hand with zero holding torque.</p>
+            <p class="metric-sub" style="margin-top:8px;"><strong>Method:</strong> Change one variable at a time: swap drivers between sockets, swap motors between drivers, and short each coil by hand to feel the shaft stiffen. Any fault that moves with a component belongs to that component.</p>
+            <p class="metric-sub" style="margin-top:8px;"><strong>Three Separate Faults Isolated:</strong> (1) 2.54 mm Dupont pins forced into a 2.0 mm JST PH socket caused a 35 &Omega; coil reading instead of 3.5 &Omega;; (2) one dead DRV8825 driver (pot turned to maximum); (3) a CNC Shield X-axis socket that never passed step pulses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-06" class="section">
+      <div class="container">
+        <div class="section-header-stack">
+          <span class="eyebrow">06 / Electronics</span>
+          <h2>From jumper wires to a real motion controller</h2>
+          <p class="lead" style="margin-top:10px;max-width:760px;">
+            Starting with a Raspberry Pi 5 generating Python step pulses into an Arduino CNC Shield V3
+            and DRV8825 drivers exposed every weakness of loose jumpers and potentiometer current trim &mdash;
+            leading directly to the integrated SKR mini E3 V2.0 with software-set TMC2209 drivers under Klipper.
+          </p>
+        </div>
+
+        <div class="grid-3" style="margin-bottom:32px;">
+          <figure class="figure-card">
+            <div class="figure-frame flush photo-tall">
+              <img src="images/tilt-table/fig11_drv8825_driver_photo.jpg" alt="DRV8825 stepper driver close-up">
+            </div>
+            <figcaption class="caption"><strong>Figure 12A:</strong> DRV8825 stepper driver. One died after its current trim pot was turned to maximum.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <div class="figure-frame flush photo-tall">
+              <img src="images/tilt-table/fig12_cnc_shield_photo.jpg" alt="CNC Shield V3 wired to Pi 5 with jumper wires">
+            </div>
+            <figcaption class="caption"><strong>Figure 12B:</strong> Arduino CNC Shield V3 wired to the Raspberry Pi 5 with jumper wires during early bring-up.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <div class="figure-frame flush photo-tall">
+              <img src="images/tilt-table/fig13_tilt_motor_jst_photo.jpg" alt="Tilt motor mounted on printed upright with JST PH cable">
+            </div>
+            <figcaption class="caption"><strong>Figure 12C:</strong> Tilt motor mounted on printed PETG upright with the proper 2.0 mm JST PH cable.</figcaption>
+          </figure>
+        </div>
+
+        <div class="table-wrap" style="margin-bottom:36px;">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th style="width:110px;">Date</th>
+                <th>Bench Observation</th>
+                <th>Root Cause &amp; Corrective Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>23 Oct</td>
+                <td>One motor clicks; neither holds torque.</td>
+                <td>2.54 mm Dupont pins in the motor&rsquo;s 2.0 mm JST PH socket made poor contact (35 &Omega; coil reading). Ordered proper JST PH-to-Dupont cables.</td>
+              </tr>
+              <tr>
+                <td>1 Nov</td>
+                <td>Spin motor dead in X socket; works in Y.</td>
+                <td>Single-variable swapping isolated a dead DRV8825 driver (pot turned to end stop) and a CNC Shield X channel that never passed step pulses. Retired X socket.</td>
+              </tr>
+              <tr>
+                <td>2 Nov</td>
+                <td>Both motors move with new cables/drivers; tilt later pulses.</td>
+                <td>Tilt motor was plugged into the socket wired to the spin signal. Mapped tilt to Y and spin to Z in software rather than rewiring.</td>
+              </tr>
+              <tr>
+                <td>3 Nov</td>
+                <td>Tilt jerky; raising current made driver scalding hot.</td>
+                <td>Torque margin, not current (Case Study C). Turned pot back down, added heatsinks and active fan cooling.</td>
+              </tr>
+              <tr>
+                <td>10 Nov</td>
+                <td>System-wide design review.</td>
+                <td>Every electrical fault traced back to loose jumpers or hand-trimmed drivers. Selected an integrated board with UART TMC2209 drivers.</td>
+              </tr>
+              <tr>
+                <td>18 Nov</td>
+                <td>SKR mini E3 V2 arrives on bench.</td>
+                <td>Built Klipper v0.11.0 firmware to match the printer (required a linker fix on a current compiler), flashed via SD card. Spin on XM, tilt on YM, optical sensors on endstops (3.3 V debug header). Runs under Pi + Klipper + Fluidd; sensors, directions, 12 V fan, and HOME_AB verified.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid-3">
+          <figure class="figure-card">
+            <div class="figure-frame flush photo-tall">
+              <img src="images/tilt-table/fig14_skr_board_closeup.jpg" alt="BTT SKR mini E3 V2.0 board close-up">
+            </div>
+            <figcaption class="caption"><strong>Figure 13A:</strong> BTT SKR mini E3 V2.0 integrating four UART-controlled TMC2209 drivers on a single PCB.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <div class="figure-frame flush photo-tall">
+              <img src="images/tilt-table/fig15_skr_bench_wired.jpg" alt="SKR mini E3 wired on the bench">
+            </div>
+            <figcaption class="caption"><strong>Figure 13B:</strong> Bench wiring: spin on XM, tilt on YM, optical endstops powered from 3.3 V debug header.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <div class="figure-frame flush photo-tall">
+              <img src="images/tilt-table/fig16_fluidd_screenshot.jpg" alt="Fluidd interface connected to SKR mini E3 through Klipper">
+            </div>
+            <figcaption class="caption"><strong>Figure 13C:</strong> Fluidd web interface connected live to the SKR mini E3 V2.0 running Klipper v0.11.0.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-07" class="section">
+      <div class="container">
+        <div class="section-header-stack">
+          <span class="eyebrow">07 / Software and Verification</span>
+          <h2>The CAD is code, and so are the checks</h2>
+          <p class="lead" style="margin-top:10px;max-width:760px;">
+            Every part is generated by Python scripts: changing a single parameter regenerates every
+            STL, every print plate, and every audit. Nothing is called done until a script measures
+            the exported meshes directly from disk.
+          </p>
+        </div>
+
+        <div class="hairline-grid cols-3">
+          <div class="hairline-cell">
+            <span class="label">tilt_table_cad.py &middot; hardware.py</span>
+            <h3 style="margin:10px 0 8px;">Parametric CAD</h3>
+            <p class="metric-sub">All printed parts and purchased hardware (608 bearings, M8/M10 bolts, pulleys, motors) modeled with manifold3d and automatically arranged onto AD5M print plates.</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="label">audit.py &middot; sweep_check.py</span>
+            <h3 style="margin:10px 0 8px;">Collision &amp; Stack Audit</h3>
+            <p class="metric-sub">Sweeps tilt from +5&deg; to &minus;95&deg; at four spin angles plus a full 360&deg; spin; checks every bearing face, bolt length, and clearance while reporting tilting mass (1.11 kg) and CoM (34 mm below axis).</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="label">verify_v5.py &middot; verify_v51.py &middot; export_v6.py</span>
+            <h3 style="margin:10px 0 8px;">Measure Exported Meshes</h3>
+            <p class="metric-sub">Reloads STLs from disk and verifies rib circles, slit widths, sleeve lengths, flag depth, and watertightness &mdash; 42, 46, 14, and 18 checks across revisions, all passing.</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="label">fractal_to_5m.py</span>
+            <h3 style="margin:10px 0 8px;">5-Axis G-Code Converter</h3>
+            <p class="metric-sub">Converts Fractal Cortex output into AD5M G-code: mirrors tilts away from gantry, lifts/parks before rotations, finishes rotations unidirectionally against backlash, enables part fan, and injects skip checks.</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="label">tilt_macros.cfg</span>
+            <h3 style="margin:10px 0 8px;">Klipper Motion Macros</h3>
+            <p class="metric-sub">HOME_AB, TT_VERIFY (first skipped step re-homes and continues; second pauses print), TT_JOG, TT_SET_LEVEL, and TT_OFF (levels table prior to power-off so the yoke does not drop).</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="label">tt_calibrate.py &middot; verify_sequence.py</span>
+            <h3 style="margin:10px 0 8px;">Calibration &amp; Dry Run</h3>
+            <p class="metric-sub">Prints a 40 mm test block, probes it with the nozzle in 52 touches, and solves for real plate height, wobble, axis lean, and sag. Companion script replays G-code against CAD for collision checks.</p>
+          </div>
+        </div>
+
+        <div class="cli-bar">
+          <span class="cli-text">python3 fractal_to_5m.py part.gcode part_5m.gcode --cal tt_cal.json --verify-every 1 --fan 100</span>
+          <button type="button" class="btn btn-sm" data-copy="python3 fractal_to_5m.py part.gcode part_5m.gcode --cal tt_cal.json --verify-every 1 --fan 100">Copy Command</button>
+        </div>
+
+        <div class="grid-2" style="margin-top:36px;align-items:center;">
+          <figure class="figure-card">
+            <div class="figure-frame flush">
+              <img src="images/tilt-table/fig17_ad5m_workbench_sim.jpg" alt="AD5M Workbench offline 3D simulator showing tilt table inside printer">
+            </div>
+            <figcaption class="caption"><strong>Figure 14 &mdash; AD5M Workbench:</strong> Offline 3D browser simulator checking sliced G-code against hotend volumetric flow limits and test-fitting the exported tilt-table meshes inside the printer enclosure.</figcaption>
+          </figure>
+          <div>
+            <h3>Desk-Test Rig &amp; Why Fit Coupons Matter</h3>
+            <p style="margin-top:12px;">
+              Before migrating to Klipper, a Python script on the Raspberry Pi 5 drove both rotary
+              axes with acceleration ramps, homed against the optical sensors, replayed rotations
+              from a sample 5-axis file, and measured homing repeatability (target &lt; 0.05&deg;).
+            </p>
+            <p>
+              Case Study B proved that &ldquo;CAD verified&rdquo; is not the same as &ldquo;physically
+              fits.&rdquo; Every revision since V4 ships with a 24 g fit-coupon plate printed first
+              and an explicit list of unverified assumptions in the version README.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-08" class="section">
+      <div class="container">
+        <div class="section-header-stack">
+          <span class="eyebrow">08 / The Host Printer</span>
+          <h2>Preparing the Flashforge Adventurer 5M</h2>
+        </div>
+
+        <div class="grid-2" style="align-items:start;margin-bottom:36px;">
+          <div>
+            <p>
+              Because the AD5M&rsquo;s stock closed firmware cannot communicate with a secondary MCU,
+              I rooted the printer with <strong>Forge-X</strong> to expose its native Klipper host.
+              This enables the SKR mini E3 V2 to operate as synchronized rotary axes inside the same
+              motion controller as X, Y, and Z.
+            </p>
+            <div class="table-wrap" style="margin-top:24px;">
+              <table class="spec-table">
+                <thead>
+                  <tr>
+                    <th>Measured Printer Parameter</th>
+                    <th>Tuned Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Extruder rotation distance</td><td>4.39 (stock 4.7)</td></tr>
+                  <tr><td>Input shaper (X / Y)</td><td>EI 63.4 Hz / MZV 52.8 Hz</td></tr>
+                  <tr><td>Pressure advance (PLA / PETG)</td><td>0.035 / 0.07</td></tr>
+                  <tr><td>Max volumetric flow (PLA / PETG)</td><td>23 / 18 mm&sup3;/s</td></tr>
+                  <tr><td>Bed mesh</td><td>11 &times; 11 points</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="grid-2" style="gap:20px;">
+            <figure class="figure-card">
+              <div class="figure-frame flush photo-tall">
+                <img src="images/tilt-table/fig18_petg_temp_tower_photo.jpg" alt="PETG temperature tower printed on AD5M">
+              </div>
+              <figcaption class="caption"><strong>Figure 15A:</strong> PETG temperature tower tuned on the rooted AD5M.</figcaption>
+            </figure>
+            <figure class="figure-card">
+              <div class="figure-frame flush photo-tall">
+                <img src="images/tilt-table/fig19_first_layer_squares_photo.jpg" alt="First layer calibration squares across bed">
+              </div>
+              <figcaption class="caption"><strong>Figure 15B:</strong> Full-bed first-layer squares verifying the 11&times;11 mesh.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="section-header-stack" style="margin-top:48px;">
+          <span class="eyebrow">Hardware Documentation &middot; On-Printer Integration</span>
+          <h3>Current Prototype Mounted on the AD5M</h3>
+        </div>
+        <div style="margin-bottom:24px;">
+          <figure class="figure-card">
+  <div class="photo-slot ratio-16-9" data-photo-slot="proto-printer" data-default-src="images/prototype-printer.jpg" data-default-bw="false">
+    <img class="slot-img" alt="Current Prototype — Mounted Inside the Flashforge Adventurer 5M">
+    <div class="slot-placeholder">
+      <span class="eyebrow">Photo Slot C &middot; Mounted on AD5M (Hero)</span>
+      <div class="slot-title">Current Prototype — Mounted Inside the Flashforge Adventurer 5M</div>
+      <div class="slot-desc">Place images/prototype-printer.jpg in images/ (or drag a photo here). Front 3/4 view showing bed clamping and Z clearance beneath the CoreXY gantry.</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  <figcaption class="caption"><strong>Figure 16 &mdash; Prototype Installed on AD5M:</strong> Non-destructive clamp-on mounting inside the 220 mm cube build volume preserving 115 mm usable height above the &Oslash;200 mm plate.</figcaption>
+</figure>
+        </div>
+        <div class="grid-2">
+          <figure class="figure-card">
+  <div class="photo-slot ratio-16-10" data-photo-slot="proto-printer-tilted" data-default-src="images/prototype-printer-tilted.jpg" data-default-bw="false">
+    <img class="slot-img" alt="Tilted Clearance Near Gantry">
+    <div class="slot-placeholder">
+      <span class="eyebrow">Photo Slot D1 &middot; On-Printer Detail</span>
+      <div class="slot-title">Tilted Clearance Near Gantry</div>
+      <div class="slot-desc">Place images/prototype-printer-tilted.jpg in images/ showing tilted plate clearance beneath the AD5M toolhead and rails.</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  <figcaption class="caption"><strong>Figure 16A:</strong> Physical tilt clearance verification beneath the AD5M toolhead and gantry.</figcaption>
+</figure>
+          <figure class="figure-card">
+  <div class="photo-slot ratio-16-10" data-photo-slot="proto-printer-clamp" data-default-src="images/prototype-printer-clamp.jpg" data-default-bw="false">
+    <img class="slot-img" alt="Bed-Edge Clamping &amp; SKR mini E3 USB Routing">
+    <div class="slot-placeholder">
+      <span class="eyebrow">Photo Slot D2 &middot; On-Printer Detail</span>
+      <div class="slot-title">Bed-Edge Clamping &amp; SKR mini E3 USB Routing</div>
+      <div class="slot-desc">Place images/prototype-printer-clamp.jpg in images/ showing the reversible bed clamps and USB/power routing.</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  <figcaption class="caption"><strong>Figure 16B:</strong> Reversible bed-edge upright clamp interface and SKR mini E3 V2 USB connection.</figcaption>
+</figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-09" class="section">
+      <div class="container">
+        <div class="section-header-stack">
+          <span class="eyebrow">09 / Next Steps</span>
+          <h2>The path to the first 3+2 print</h2>
+        </div>
+        <div class="hairline-grid cols-3">
+          <div class="hairline-cell">
+            <span class="index-num">Step 01</span>
+            <h3 style="margin:10px 0 8px;">Fix the Tilt Home Offset</h3>
+            <p class="metric-sub">After homing, the plate reads ~3&deg; nose-down because the tilt flag enters the beam early. Shift flag ~2 mm, re-home, and store true level with <span class="code-inline">TT_SET_LEVEL</span>.</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="index-num">Step 02</span>
+            <h3 style="margin:10px 0 8px;">Print V6 Parts &amp; Swap Motor</h3>
+            <p class="metric-sub">Print the verified V6 slotted sensor bracket and upright SKR board tray, then fit the 40 mm NEMA 17 tilt motor for 4.6&times; torque margin.</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="index-num">Step 03</span>
+            <h3 style="margin:10px 0 8px;">Bench Speed Ladder</h3>
+            <p class="metric-sub">Ramp speeds on the bench to locate where steppers first skip, then derate operating speed to 60&ndash;70% of that limit.</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="index-num">Step 04</span>
+            <h3 style="margin:10px 0 8px;">Move to the Printer (USB)</h3>
+            <p class="metric-sub">Mount the table, plug the SKR board into the AD5M&rsquo;s USB port, and verify Forge-X Klipper enumerates it &mdash; the biggest remaining integration unknown.</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="index-num">Step 05</span>
+            <h3 style="margin:10px 0 8px;">52-Touch Calibration &amp; Air Run</h3>
+            <p class="metric-sub">Execute the 52-touch nozzle probe routine, followed by a cold-nozzle dry run with the bed lowered to confirm live motion clearances.</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="index-num">Step 06</span>
+            <h3 style="margin:10px 0 8px;">First 3+2 Support-Free Print</h3>
+            <p class="metric-sub">Print a T-bracket sliced in Fractal Cortex that requires sacrificial support on a flat printer and zero support on the tilt table.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-10" class="section">
+      <div class="container">
+        <div class="section-header-stack">
+          <span class="eyebrow">10 / Reflection</span>
+          <h2>What I learned</h2>
+        </div>
+        <div class="hairline-grid cols-2">
+          <div class="hairline-cell">
+            <h3>Build early, then measure</h3>
+            <p class="metric-sub" style="margin-top:8px;">The V4 build uncovered two flaws no CAD review caught. A printed fit coupon costs 24 g of plastic; a wrong yoke arm costs a full day.</p>
+          </div>
+          <div class="hairline-cell">
+            <h3>Change one variable at a time</h3>
+            <p class="metric-sub" style="margin-top:8px;">Three separate electrical faults initially looked like one dead-motor failure. Swapping parts systematically one by one separated every root cause.</p>
+          </div>
+          <div class="hairline-cell">
+            <h3>Find the cause, not the knob</h3>
+            <p class="metric-sub" style="margin-top:8px;">Turning up driver current looked like a fix for jerky tilt and nearly cooked a driver. A one-line torque calculation exposed the real mechanical limit.</p>
+          </div>
+          <div class="hairline-cell">
+            <h3>Write down what is unverified</h3>
+            <p class="metric-sub" style="margin-top:8px;">Every version README ends with what has not yet been tested. It keeps documentation honest and dictates the exact next bench experiment.</p>
+          </div>
+        </div>
+
+        <div class="hairline-cell surface" style="border:1px solid var(--line);margin-top:28px;">
+          <span class="label">How I Worked (AI Engineering Partner Disclosure)</span>
+          <p class="metric-sub" style="margin-top:8px;">
+            I used an AI engineering assistant (Claude) as a design partner: it wrote the parametric
+            CAD scripts, automated checks, and firmware configs from my requirements, measurements,
+            and bench results. I set the engineering goals, printed and assembled every part, did all
+            wiring and testing, took the physical measurements, and made every design decision. The
+            private repository <span class="code-inline">jojcdm/ad5m-tilt-table</span> preserves the full commit history.
+          </p>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag-chip">Mechanism Design</span>
+          <span class="tag-chip">Bearing &amp; Fastener Stack-Ups</span>
+          <span class="tag-chip">Tolerance &amp; Fit Testing</span>
+          <span class="tag-chip">FDM Design for Manufacture</span>
+          <span class="tag-chip">Torque Sizing</span>
+          <span class="tag-chip">Stepper Drivers &amp; Wiring</span>
+          <span class="tag-chip">Systematic Fault Isolation</span>
+          <span class="tag-chip">Klipper Firmware</span>
+          <span class="tag-chip">Embedded Linux &amp; SSH</span>
+          <span class="tag-chip">Python</span>
+          <span class="tag-chip">G-Code</span>
+          <span class="tag-chip">Git &amp; GitHub</span>
+          <span class="tag-chip">Technical Writing</span>
+        </div>
+
+        <div class="project-pagination">
+          <a href="projects.html" class="pag-link">
+            <span class="label">&larr; Back to Index</span>
+            <span class="pag-title">All Projects Overview</span>
+          </a>
+          <a href="fixture.html" class="pag-link">
+            <span class="label">Next Case Study &rarr;</span>
+            <span class="pag-title">Invented Testing Fixture (INV2508037)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">Jack Johnston</div>
+        <div class="caption" style="margin-top:6px;">
+          Mechanical Engineering &amp; Mathematics &middot; Duke University &rsquo;27 &middot; Durham, NC &amp; Corona del Mar, CA
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">All Projects</a>
+        <a href="tilt-table.html">AD5M Tilt Table</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://github.com/jojcdm" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jack-johnston-b060a22b8" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

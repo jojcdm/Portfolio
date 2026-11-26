@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Jack Johnston</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Jack Johnston</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <div class="nav-dropdown">
+          <button type="button" class="nav-link active" data-dropdown-trigger aria-haspopup="true">
+            Portfolio <span class="dropdown-caret">&#9662;</span>
+          </button>
+          <div class="dropdown-menu" role="menu">
+            <a href="projects.html" class="dropdown-item active" role="menuitem">
+              <span class="dropdown-title">All Projects Overview</span>
+              <span class="dropdown-sub">Index &amp; Specification Matrix</span>
+            </a>
+            <a href="tilt-table.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">AD5M 3+2-Axis Tilt Table</span>
+              <span class="dropdown-sub">Flagship &middot; Rev. V6 &middot; Klipper</span>
+            </a>
+            <a href="fixture.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Invented Testing Fixture</span>
+              <span class="dropdown-sub">J&amp;J MedTech &middot; INV2508037</span>
+            </a>
+            <a href="bionic-arm.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Bionic Arm</span>
+              <span class="dropdown-sub">60+ Parts &middot; 500+ Hours</span>
+            </a>
+            <a href="exoskeleton.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Powered Exoskeleton (suit_v5)</span>
+              <span class="dropdown-sub">Python build123d &middot; Tendon Actuation</span>
+            </a>
+          </div>
+        </div>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" data-theme-toggle>Light</button>
+        <button type="button" class="mobile-menu-btn" data-mobile-toggle>Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-drawer" data-mobile-drawer aria-label="Mobile Navigation">
+    <a href="index.html" class="">Home</a>
+    <a href="experience.html" class="">Experience</a>
+    <a href="projects.html" class="active">Portfolio &mdash; All Projects</a>
+    <a href="tilt-table.html" class="sub">AD5M 3+2-Axis Tilt Table</a>
+    <a href="fixture.html" class="sub">Invented Testing Fixture (INV2508037)</a>
+    <a href="bionic-arm.html" class="sub">Bionic Arm</a>
+    <a href="exoskeleton.html" class="sub">Powered Exoskeleton (suit_v5)</a>
+    <a href="resume.html" class="">Resume</a>
+    <a href="contact.html" class="">Contact</a>
+  </nav>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Portfolio Index</span>
+        <h1 style="margin:14px 0 18px;">Engineering Projects</h1>
+        <p class="lead" style="max-width:680px;">
+          Selected mechanical assemblies, code-driven parametric CAD pipelines, embedded motion
+          control hardware, and medical device verification fixtures.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar" data-filter-group=".proj-item">
+          <button type="button" class="filter-btn active" data-filter="all">All (4)</button>
+          <button type="button" class="filter-btn" data-filter="mechanisms">Mechanisms &amp; CAD</button>
+          <button type="button" class="filter-btn" data-filter="embedded">Embedded &amp; Robotics</button>
+          <button type="button" class="filter-btn" data-filter="medical">Medical Devices</button>
+        </div>
+
+        <div class="proj-item" data-category="mechanisms,embedded" style="padding-bottom:56px;border-bottom:1px solid var(--line);margin-bottom:56px;">
+          <span class="eyebrow">01 / Flagship Case Study &middot; Oct&ndash;Nov 2026 &middot; Rev. V6</span>
+          <div class="grid-2" style="margin-top:20px;align-items:center;">
+            <div>
+              <figure class="figure-card">
+  <div class="photo-slot ratio-16-10" data-photo-slot="proto-alone" data-default-src="images/prototype-alone.jpg" data-default-bw="false">
+    <img class="slot-img" alt="AD5M Tilt Table — Standalone Assembly">
+    <div class="slot-placeholder">
+      <span class="eyebrow">Flagship Prototype</span>
+      <div class="slot-title">AD5M Tilt Table — Standalone Assembly</div>
+      <div class="slot-desc">Drop images/prototype-alone.jpg into images/ or drag a photo here.</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  <figcaption class="caption"><strong>Live Hardware Slot</strong> &mdash; Synced with Home &amp; AD5M Case Study (see CAD renders inside full monograph).</figcaption>
+</figure>
+            </div>
+            <div>
+              <h2 style="margin-bottom:14px;">AD5M 3+2-Axis Tilt Table</h2>
+              <p>
+                A bolt-on two-axis tilting and rotating trunnion print bed converting a Flashforge
+                Adventurer 5M into a 3+2-axis printer with zero permanent modifications. Built with
+                Python + manifold3d parametric CAD, 608 bearing preload stack-ups, 5:1 GT2 belt
+                drives, and dual-MCU Klipper motion control.
+              </p>
+              <div class="hairline-grid cols-2" style="margin:22px 0 24px;">
+                <div class="hairline-cell surface"><span class="label">Tilt Range</span><div class="metric-val">+5&deg; to &minus;95&deg;</div></div>
+                <div class="hairline-cell surface"><span class="label">Resolution</span><div class="metric-val">0.011&deg;</div></div>
+                <div class="hairline-cell surface"><span class="label">Revisions</span><div class="metric-val">6 (V1&ndash;V6)</div></div>
+                <div class="hairline-cell surface"><span class="label">Controller</span><div class="metric-val">SKR mini E3 V2</div></div>
+              </div>
+              <a href="tilt-table.html" class="btn btn-primary">Open Complete Case Study &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hairline-grid cols-3">
+          <article class="hairline-cell proj-item" data-category="medical,mechanisms">
+            <span class="index-num">02 &middot; Medical Devices &middot; 2025</span>
+            <h3 style="margin:12px 0 14px;">Invented Testing Fixture</h3>
+            <div style="margin-bottom:18px;">
+              <figure class="figure-card">
+  <div class="photo-slot ratio-16-10" data-photo-slot="fixture-hero" data-default-src="images/fixture-hero.jpg" data-default-bw="false">
+    <img class="slot-img" alt="STM1000 Fixture Diagram">
+    <div class="slot-placeholder">
+      <span class="eyebrow">Non-Confidential Visual</span>
+      <div class="slot-title">STM1000 Fixture Diagram</div>
+      <div class="slot-desc">Drop images/fixture-hero.jpg (non-confidential visual only).</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  
+</figure>
+            </div>
+            <p class="metric-sub" style="margin-bottom:18px;">
+              Rotating Device Verification Testing (DVT) fixture for experimental cardiac catheters at
+              Johnson &amp; Johnson Electrophysiology. Submitted as invention disclosure
+              <span class="code-inline">INV2508037</span> and adopted by R&amp;D.
+            </p>
+            <a href="fixture.html" class="btn btn-sm">View Case Study &rarr;</a>
+          </article>
+
+          <article class="hairline-cell proj-item" data-category="mechanisms">
+            <span class="index-num">03 &middot; Mechanisms &middot; 2024</span>
+            <h3 style="margin:12px 0 14px;">Bionic Arm</h3>
+            <div style="margin-bottom:18px;">
+              <figure class="figure-card">
+  <div class="photo-slot ratio-16-10" data-photo-slot="bionic-hero" data-default-src="images/bionic-hero.jpg" data-default-bw="false">
+    <img class="slot-img" alt="Wrist-Activated Bionic Arm">
+    <div class="slot-placeholder">
+      <span class="eyebrow">Prototype Photo</span>
+      <div class="slot-title">Wrist-Activated Bionic Arm</div>
+      <div class="slot-desc">Drop images/bionic-hero.jpg or drag a build photo here.</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  
+</figure>
+            </div>
+            <p class="metric-sub" style="margin-bottom:18px;">
+              Mechanical wrist-mounted foam-dart launcher developed over 500+ hours of CAD iteration,
+              integrating 60+ intricate, interchangeable 3D-printed mechanisms into a functioning
+              wrist-activated wearable assembly.
+            </p>
+            <a href="bionic-arm.html" class="btn btn-sm">View Case Study &rarr;</a>
+          </article>
+
+          <article class="hairline-cell proj-item" data-category="mechanisms,embedded">
+            <span class="index-num">04 &middot; Wearable Robotics &middot; 2026</span>
+            <h3 style="margin:12px 0 14px;">Powered Exoskeleton (suit_v5)</h3>
+            <div style="margin-bottom:18px;">
+              <figure class="figure-card">
+  <div class="photo-slot ratio-16-10" data-photo-slot="exo-hero" data-default-src="images/exo-hero.jpg" data-default-bw="false">
+    <img class="slot-img" alt="suit_v5 Assembly">
+    <div class="slot-placeholder">
+      <span class="eyebrow">CAD / 3D Studio</span>
+      <div class="slot-title">suit_v5 Assembly</div>
+      <div class="slot-desc">Drop images/exo-hero.jpg or drag a 3D Studio render here.</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  
+</figure>
+            </div>
+            <p class="metric-sub" style="margin-bottom:18px;">
+              Modular Python + build123d parametric CAD pipeline generating a full-body exoskeleton
+              and single-arm prototype with 3D-printed tendon sheaths, wiring harnesses, and an
+              interactive browser 3D studio.
+            </p>
+            <a href="exoskeleton.html" class="btn btn-sm">View Case Study &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header-stack">
+          <span class="eyebrow">02 / Quick Specification Matrix</span>
+          <h2>Project Comparison</h2>
+        </div>
+        <div class="table-wrap">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th>Project</th>
+                <th>Domain</th>
+                <th>Primary Stack</th>
+                <th>Key Deliverable / Metric</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="clickable-row" onclick="window.location='tilt-table.html'">
+                <td>AD5M 3+2-Axis Tilt Table</td>
+                <td>Multi-Axis Mechanism &amp; Controls</td>
+                <td>Python, manifold3d, Klipper, SKR mini E3 V2</td>
+                <td>0.011&deg; resolution, +5&deg; to &minus;95&deg;, 6 revisions</td>
+                <td>V5.1 Bench Tested / V6 CAD Verified</td>
+              </tr>
+              <tr class="clickable-row" onclick="window.location='fixture.html'">
+                <td>Invented Testing Fixture (STM1000)</td>
+                <td>Medical Device DVT</td>
+                <td>SolidWorks, ISO 8 Cleanroom, Gage R&amp;R</td>
+                <td>Invention Disclosure INV2508037</td>
+                <td>Submitted to J&amp;J IP Team</td>
+              </tr>
+              <tr class="clickable-row" onclick="window.location='bionic-arm.html'">
+                <td>Bionic Arm</td>
+                <td>Wearable Mechanism</td>
+                <td>SolidWorks / Fusion 360, FDM 3D Printing</td>
+                <td>500+ hours, 60+ interchangeable parts</td>
+                <td>Functional Prototype Built</td>
+              </tr>
+              <tr class="clickable-row" onclick="window.location='exoskeleton.html'">
+                <td>Powered Exoskeleton (suit_v5)</td>
+                <td>Parametric Wearable Robotics</td>
+                <td>Python, build123d, Tendon Routing, 3D Studio</td>
+                <td>Modular code-to-STL limb &amp; torso pipeline</td>
+                <td>Single-Arm Prototype Active</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">Jack Johnston</div>
+        <div class="caption" style="margin-top:6px;">
+          Mechanical Engineering &amp; Mathematics &middot; Duke University &rsquo;27 &middot; Durham, NC &amp; Corona del Mar, CA
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">All Projects</a>
+        <a href="tilt-table.html">AD5M Tilt Table</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://github.com/jojcdm" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jack-johnston-b060a22b8" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

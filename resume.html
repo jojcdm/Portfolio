@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Jack Johnston</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Jack Johnston</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <div class="nav-dropdown">
+          <button type="button" class="nav-link" data-dropdown-trigger aria-haspopup="true">
+            Portfolio <span class="dropdown-caret">&#9662;</span>
+          </button>
+          <div class="dropdown-menu" role="menu">
+            <a href="projects.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">All Projects Overview</span>
+              <span class="dropdown-sub">Index &amp; Specification Matrix</span>
+            </a>
+            <a href="tilt-table.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">AD5M 3+2-Axis Tilt Table</span>
+              <span class="dropdown-sub">Flagship &middot; Rev. V6 &middot; Klipper</span>
+            </a>
+            <a href="fixture.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Invented Testing Fixture</span>
+              <span class="dropdown-sub">J&amp;J MedTech &middot; INV2508037</span>
+            </a>
+            <a href="bionic-arm.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Bionic Arm</span>
+              <span class="dropdown-sub">60+ Parts &middot; 500+ Hours</span>
+            </a>
+            <a href="exoskeleton.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Powered Exoskeleton (suit_v5)</span>
+              <span class="dropdown-sub">Python build123d &middot; Tendon Actuation</span>
+            </a>
+          </div>
+        </div>
+        <a href="resume.html" class="nav-link active">Resume</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" data-theme-toggle>Light</button>
+        <button type="button" class="mobile-menu-btn" data-mobile-toggle>Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-drawer" data-mobile-drawer aria-label="Mobile Navigation">
+    <a href="index.html" class="">Home</a>
+    <a href="experience.html" class="">Experience</a>
+    <a href="projects.html" class="">Portfolio &mdash; All Projects</a>
+    <a href="tilt-table.html" class="sub">AD5M 3+2-Axis Tilt Table</a>
+    <a href="fixture.html" class="sub">Invented Testing Fixture (INV2508037)</a>
+    <a href="bionic-arm.html" class="sub">Bionic Arm</a>
+    <a href="exoskeleton.html" class="sub">Powered Exoskeleton (suit_v5)</a>
+    <a href="resume.html" class="active">Resume</a>
+    <a href="contact.html" class="">Contact</a>
+  </nav>
+
+  <main>
+
+    <section class="page-hero no-print">
+      <div class="container section-header" style="margin-bottom:0;">
+        <div>
+          <span class="eyebrow">Curriculum Vitae</span>
+          <h1 style="margin-top:12px;">Resume</h1>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" onclick="window.print()">Print / Save PDF</button>
+          <button type="button" class="btn" data-copy="jjackjohnston05@gmail.com">Copy Email</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container">
+        <div class="resume-sheet">
+          <div class="resume-top">
+            <div class="resume-id">
+              <div class="resume-avatar" data-resume-avatar>
+                <img src="images/headshot.jpg" alt="Jack Johnston" onerror="this.parentNode.textContent='JJ'">
+              </div>
+              <div>
+                <h2 style="font-weight:400;letter-spacing:-0.02em;">Jack Johnston</h2>
+                <div class="metric-sub" style="margin-top:4px;">
+                  Mechanical Engineering &amp; Materials Science student at Duke University &middot; R&amp;D, data analysis &amp; hardware design
+                </div>
+              </div>
+            </div>
+            <div style="text-align:right;font-size:13px;color:var(--text-secondary);line-height:1.6;">
+              <div>+1 (949) 514-1475</div>
+              <div><a href="mailto:jjackjohnston05@gmail.com">jjackjohnston05@gmail.com</a></div>
+              <div>linkedin.com/in/jack-johnston-b060a22b8 &middot; github.com/jojcdm</div>
+            </div>
+          </div>
+
+          <div class="resume-grid">
+            <div>
+              <div class="resume-block">
+                <div class="resume-block-title">Education</div>
+                <div style="font-weight:500;color:var(--text);">Duke University</div>
+                <div class="metric-sub">Durham, NC &middot; Expected Graduation May 2027</div>
+                <div style="font-size:14px;color:var(--text-secondary);margin-top:8px;">
+                  <strong>B.S. Mechanical Engineering</strong><br>
+                  Minor: Mathematics<br>
+                  GPA: 3.8 &middot; Dean&rsquo;s List (Fall 2023, Spring 2024)
+                </div>
+                <div style="font-size:13px;color:var(--muted);margin-top:10px;">
+                  IES Abroad Madrid &mdash; Engineering Study Abroad (Fall 2025)
+                </div>
+              </div>
+
+              <div class="resume-block">
+                <div class="resume-block-title">Technical Skills</div>
+                <ul class="clean-list" style="font-size:13.5px;margin-top:0;">
+                  <li>SolidWorks &amp; Fusion 360</li>
+                  <li>Python Parametric CAD (manifold3d, build123d)</li>
+                  <li>Arduino, Klipper &amp; 3D Printing (FDM DFM)</li>
+                  <li>Data Analysis, Statistics &amp; Machine Learning</li>
+                  <li>Minitab &amp; Gage R&amp;R</li>
+                  <li>Design Verification &amp; Validation (DVT, IQ)</li>
+                  <li>Microsoft Suite &amp; Git/GitHub</li>
+                </ul>
+              </div>
+
+              <div class="resume-block">
+                <div class="resume-block-title">Languages</div>
+                <div style="font-size:14px;color:var(--text-secondary);">
+                  English &mdash; Fluent<br>
+                  French &mdash; Conversational (8 yrs)
+                </div>
+              </div>
+
+              <div class="resume-block">
+                <div class="resume-block-title">Locations</div>
+                <div style="font-size:14px;color:var(--text-secondary);">
+                  Durham, North Carolina<br>
+                  Corona del Mar, California
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="resume-block">
+                <div class="resume-block-title">Work Experience &amp; Research</div>
+
+                <div class="resume-entry">
+                  <div class="resume-entry-head">
+                    <h3>Johnson &amp; Johnson MedTech &mdash; Quality + R&amp;D Engineering Intern</h3>
+                    <span class="label">2025 &amp; 2026</span>
+                  </div>
+                  <ul class="clean-list" style="font-size:14px;">
+                    <li>Worked hands-on across two summers with R&amp;D and manufacturing teams to build, test, and improve assembly and process workflows for next-generation cardiac catheters.</li>
+                    <li>Used structured, data-driven problem-solving to surface process inefficiencies and drive design and production improvements.</li>
+                    <li>Authored optimized procedures and documentation that standardized daily operations in a controlled ISO 8 cleanroom, reinforcing repeatability and a safety-first discipline.</li>
+                    <li>Performed Design Verification, Lot Release, and Installation Qualification testing on manufacturing devices.</li>
+                  </ul>
+                </div>
+
+                <div class="resume-entry">
+                  <div class="resume-entry-head">
+                    <h3>University of California, Irvine &mdash; Physics Research</h3>
+                    <span class="label">Summer 2024</span>
+                  </div>
+                  <ul class="clean-list" style="font-size:14px;">
+                    <li>Worked with PhD and undergraduate researchers under Prof. Cao to model material behavior under extreme conditions.</li>
+                    <li>Applied Python-based machine learning to large materials datasets, drawing insights from multi-principal-element systems.</li>
+                  </ul>
+                </div>
+
+                <div class="resume-entry">
+                  <div class="resume-entry-head">
+                    <h3>Duke University &mdash; Undergraduate Researcher</h3>
+                    <span class="label">2023 &ndash; 2024</span>
+                  </div>
+                  <ul class="clean-list" style="font-size:14px;">
+                    <li>Designed and interpreted laboratory experiments contributing empirical evidence for superfluorescence in perovskites.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="resume-block">
+                <div class="resume-block-title">Engineering Projects</div>
+
+                <div class="resume-entry">
+                  <div class="resume-entry-head">
+                    <h3>AD5M 3+2-Axis Tilt Table (Rev. V6)</h3>
+                    <span class="label">Oct &ndash; Nov 2026</span>
+                  </div>
+                  <ul class="clean-list" style="font-size:14px;">
+                    <li>Designed, printed in PETG, wired, and bench-tested a bolt-on two-axis trunnion print bed (+5&deg; to &minus;95&deg; tilt, 360&deg; spin, 0.011&deg; resolution via 5:1 GT2 belts and 608 bearing stack-ups).</li>
+                    <li>Built code-based parametric CAD (Python + manifold3d) with automated collision sweeps and mesh verification (42&ndash;46 passing checks); migrated controls to SKR mini E3 V2 (TMC2209) under Klipper v0.11.0 and rooted the host AD5M with Forge-X.</li>
+                  </ul>
+                </div>
+
+                <div class="resume-entry">
+                  <div class="resume-entry-head">
+                    <h3>Invented Testing Fixture &mdash; J&amp;J Electrophysiology (INV2508037)</h3>
+                    <span class="label">Summer 2025</span>
+                  </div>
+                  <ul class="clean-list" style="font-size:14px;">
+                    <li>Identified the need for, designed, and built a rotating testing fixture for Device Verification Testing (DVT) of experimental cardiac catheters.</li>
+                    <li>Submitted to the Johnson &amp; Johnson Intellectual Property Team under invention disclosure <span class="code-inline">INV2508037</span>; created fingerprinting solutions for patenting and handed off at R&amp;D request for follow-on intern development.</li>
+                  </ul>
+                </div>
+
+                <div class="resume-entry">
+                  <div class="resume-entry-head">
+                    <h3>Bionic Arm</h3>
+                    <span class="label">2024</span>
+                  </div>
+                  <ul class="clean-list" style="font-size:14px;">
+                    <li>Spent 500+ hours designing, iterating, and 3D-printing 60+ intricate, interchangeable pieces integrating into a functioning wrist-activated foam-dart launcher.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="resume-block">
+                <div class="resume-block-title">Leadership &amp; Philanthropy</div>
+                <div class="resume-entry">
+                  <div class="resume-entry-head">
+                    <h3>Access to Justice in the Courts &mdash; Orange County Superior Courts</h3>
+                    <span class="label">2020 &ndash; 2023</span>
+                  </div>
+                  <ul class="clean-list" style="font-size:14px;">
+                    <li>Creator and Facilitator: researched common errors for self-represented Probate Court litigants; drafted, narrated, and recorded instructional videos approved by the Presiding Judge and published on the OC Superior Court website.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">Jack Johnston</div>
+        <div class="caption" style="margin-top:6px;">
+          Mechanical Engineering &amp; Mathematics &middot; Duke University &rsquo;27 &middot; Durham, NC &amp; Corona del Mar, CA
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">All Projects</a>
+        <a href="tilt-table.html">AD5M Tilt Table</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://github.com/jojcdm" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jack-johnston-b060a22b8" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

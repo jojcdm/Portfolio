@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Portfolio — Jack Johnston</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Jack Johnston</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <div class="nav-dropdown">
+          <button type="button" class="nav-link" data-dropdown-trigger aria-haspopup="true">
+            Portfolio <span class="dropdown-caret">&#9662;</span>
+          </button>
+          <div class="dropdown-menu" role="menu">
+            <a href="projects.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">All Projects Overview</span>
+              <span class="dropdown-sub">Index &amp; Specification Matrix</span>
+            </a>
+            <a href="tilt-table.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">AD5M 3+2-Axis Tilt Table</span>
+              <span class="dropdown-sub">Flagship &middot; Rev. V6 &middot; Klipper</span>
+            </a>
+            <a href="fixture.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Invented Testing Fixture</span>
+              <span class="dropdown-sub">J&amp;J MedTech &middot; INV2508037</span>
+            </a>
+            <a href="bionic-arm.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Bionic Arm</span>
+              <span class="dropdown-sub">60+ Parts &middot; 500+ Hours</span>
+            </a>
+            <a href="exoskeleton.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Powered Exoskeleton (suit_v5)</span>
+              <span class="dropdown-sub">Python build123d &middot; Tendon Actuation</span>
+            </a>
+          </div>
+        </div>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" data-theme-toggle>Light</button>
+        <button type="button" class="mobile-menu-btn" data-mobile-toggle>Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-drawer" data-mobile-drawer aria-label="Mobile Navigation">
+    <a href="index.html" class="active">Home</a>
+    <a href="experience.html" class="">Experience</a>
+    <a href="projects.html" class="">Portfolio &mdash; All Projects</a>
+    <a href="tilt-table.html" class="sub">AD5M 3+2-Axis Tilt Table</a>
+    <a href="fixture.html" class="sub">Invented Testing Fixture (INV2508037)</a>
+    <a href="bionic-arm.html" class="sub">Bionic Arm</a>
+    <a href="exoskeleton.html" class="sub">Powered Exoskeleton (suit_v5)</a>
+    <a href="resume.html" class="">Resume</a>
+    <a href="contact.html" class="">Contact</a>
+  </nav>
+
+  <main>
+
+    <section class="splash-hero">
+      <div class="container splash-grid">
+        <div class="splash-copy">
+          <span class="eyebrow">Mechanical Engineering &middot; Duke University &rsquo;27</span>
+          <h1>Jack Johnston</h1>
+          <p class="lead">
+            Mechanical engineering and materials science student building precision hardware,
+            code-driven parametric CAD, and embedded motion control systems &mdash; from
+            multi-axis 3D printing mechanisms to medical device verification fixtures.
+          </p>
+          <div class="btn-row">
+            <a href="projects.html" class="btn btn-primary">View Selected Work &rarr;</a>
+            <a href="resume.html" class="btn">Resume</a>
+          </div>
+        </div>
+        <div>
+          <figure class="figure-card">
+  <div class="photo-slot ratio-4-5" data-photo-slot="portrait" data-default-src="images/headshot.jpg" data-default-bw="true">
+    <img class="slot-img" alt="Jack Johnston">
+    <div class="slot-placeholder">
+      <span class="eyebrow">Portrait</span>
+      <div class="slot-title">Jack Johnston</div>
+      <div class="slot-desc">Portrait photograph (4:5). Drop an updated photo here to preview or replace images/headshot.jpg.</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  <figcaption class="caption"><strong>Jack Johnston</strong> &mdash; Durham, NC &middot; Corona del Mar, CA</figcaption>
+</figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header-stack">
+          <span class="eyebrow">01 / About</span>
+          <h2>An engineer who builds and measures.</h2>
+        </div>
+        <div class="grid-2" style="align-items:start;">
+          <div>
+            <p>
+              I design mechanical hardware with one standard: it has to survive physical assembly
+              and real-world bench testing, not just look clean on a CAD screen. Whether I am tracking
+              down a 0.5 mm clamping-collar tolerance or isolating an intermittent stepper driver fault,
+              I prefer building early, printing fit coupons, and measuring the actual part.
+            </p>
+            <p>
+              Across two summers with Johnson &amp; Johnson MedTech in Quality and R&amp;D Engineering,
+              I worked hands-on with manufacturing and R&amp;D teams to build, test, and standardize
+              assembly workflows for next-generation cardiac catheters &mdash; including conceiving and
+              building a rotating verification fixture submitted as invention disclosure
+              <span class="code-inline">INV2508037</span>.
+            </p>
+            <p>
+              At Duke University (B.S. Mechanical Engineering, Minor in Mathematics, 3.8 GPA, Class of 2027),
+              my work spans materials research, robotics and manipulator kinematics, Python-based
+              parametric CAD pipelines, and custom multi-axis electromechanical testbeds.
+            </p>
+          </div>
+          <div class="grid-2" style="gap:20px;">
+            <figure class="figure-card">
+  <div class="photo-slot ratio-16-10" data-photo-slot="proto-alone" data-default-src="images/prototype-alone.jpg" data-default-bw="false">
+    <img class="slot-img" alt="Current Prototype Alone">
+    <div class="slot-placeholder">
+      <span class="eyebrow">Photo Slot &middot; Standalone</span>
+      <div class="slot-title">Current Prototype Alone</div>
+      <div class="slot-desc">Drop images/prototype-alone.jpg into the repo folder (or drag here to preview).</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  <figcaption class="caption"><strong>Bench Prototype</strong> &mdash; Standalone AD5M Tilt Table assembly.</figcaption>
+</figure>
+            <figure class="figure-card">
+  <div class="photo-slot ratio-16-10" data-photo-slot="proto-printer" data-default-src="images/prototype-printer.jpg" data-default-bw="false">
+    <img class="slot-img" alt="Mounted on AD5M Printer">
+    <div class="slot-placeholder">
+      <span class="eyebrow">Photo Slot &middot; On Printer</span>
+      <div class="slot-title">Mounted on AD5M Printer</div>
+      <div class="slot-desc">Drop images/prototype-printer.jpg into the repo folder (or drag here to preview).</div>
+      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
+    </div>
+    <div class="slot-controls">
+      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
+      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
+    </div>
+    <input type="file" accept="image/*" class="slot-input">
+  </div>
+  <figcaption class="caption"><strong>On-Printer Setup</strong> &mdash; Clamped inside the Flashforge AD5M.</figcaption>
+</figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header-stack">
+          <span class="eyebrow">02 / Disciplines</span>
+          <h2>What I Do</h2>
+        </div>
+        <div class="hairline-grid cols-3">
+          <div class="hairline-cell">
+            <span class="index-num">01</span>
+            <h3 style="margin:12px 0 8px;">Precision Mechanism Design</h3>
+            <p class="metric-sub">Trunnion tables, 608 bearing preload stack-ups, clamping-collar mechanics, and support-free FDM design for manufacture in SolidWorks, Fusion 360, and Python.</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="index-num">02</span>
+            <h3 style="margin:12px 0 8px;">Code-Based Parametric CAD</h3>
+            <p class="metric-sub">Scripted 3D geometry in Python (manifold3d, build123d), automated collision sweeps across full rotary ranges, and mesh-level dimensional audits.</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="index-num">03</span>
+            <h3 style="margin:12px 0 8px;">Embedded Motion Control</h3>
+            <p class="metric-sub">Dual-MCU Klipper firmware, SKR mini E3 V2 with TMC2209 drivers, Raspberry Pi bench rigs, Arduino prototyping, and single-variable fault isolation.</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="index-num">04</span>
+            <h3 style="margin:12px 0 8px;">Medical Device R&amp;D &amp; Quality</h3>
+            <p class="metric-sub">Design Verification (DVT), Lot Release, Installation Qualification, Minitab &amp; Gage R&amp;R, ISO 8 cleanroom procedures, and patentable fixture design (INV2508037).</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="index-num">05</span>
+            <h3 style="margin:12px 0 8px;">Materials &amp; Data Science</h3>
+            <p class="metric-sub">Python machine learning on multi-principal-element materials datasets at UC Irvine (Prof. Cao) and perovskite superfluorescence experiments at Duke.</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="index-num">06</span>
+            <h3 style="margin:12px 0 8px;">Education &amp; Leadership</h3>
+            <p class="metric-sub">Duke University B.S. Mechanical Engineering, Mathematics Minor (3.8 GPA, Dean&rsquo;s List); Fall 2025 Engineering Study Abroad in Madrid; OC Superior Courts Access to Justice creator.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">03 / Featured Work</span>
+            <h2>AD5M 3+2-Axis Tilt Table</h2>
+          </div>
+          <a href="tilt-table.html" class="btn btn-primary">Read Complete Case Study &rarr;</a>
+        </div>
+        <div class="grid-2" style="align-items:center;">
+          <figure class="figure-card">
+            <div class="figure-frame cad-light">
+              <img src="images/tilt-table/fig01_v51_cad_tilt_hero.jpg" alt="V5.1 AD5M Tilt Table CAD assembly at -60 degrees tilt">
+            </div>
+            <figcaption class="caption"><strong>Rev. V5.1 CAD Render</strong> &mdash; Full assembly at &minus;60&deg; tilt confirming clearance across uprights, base rods, and front electronics tray.</figcaption>
+          </figure>
+          <div>
+            <p class="lead">
+              A bolt-on two-axis tilting and rotating print bed that converts a $300 Flashforge
+              Adventurer 5M into a 3+2-axis printer with zero permanent printer modifications.
+            </p>
+            <p>
+              Engineered through six hardware revisions, automated Python + manifold3d collision
+              audits, a dual-MCU Klipper motion stack (SKR mini E3 V2 + Forge-X), and a custom
+              5-axis G-code converter with skipped-step verification.
+            </p>
+            <div class="hairline-grid cols-2" style="margin-top:24px;">
+              <div class="hairline-cell surface">
+                <span class="label">Tilt / Spin Range</span>
+                <div class="metric-val">+5&deg; to &minus;95&deg; / 360&deg;</div>
+              </div>
+              <div class="hairline-cell surface">
+                <span class="label">Angular Resolution</span>
+                <div class="metric-val">0.011&deg;</div>
+              </div>
+              <div class="hairline-cell surface">
+                <span class="label">Design Iterations</span>
+                <div class="metric-val">6 Revisions</div>
+              </div>
+              <div class="hairline-cell surface">
+                <span class="label">Motion Controller</span>
+                <div class="metric-val">SKR mini E3 V2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">Jack Johnston</div>
+        <div class="caption" style="margin-top:6px;">
+          Mechanical Engineering &amp; Mathematics &middot; Duke University &rsquo;27 &middot; Durham, NC &amp; Corona del Mar, CA
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">All Projects</a>
+        <a href="tilt-table.html">AD5M Tilt Table</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://github.com/jojcdm" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jack-johnston-b060a22b8" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
