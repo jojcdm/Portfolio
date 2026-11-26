@@ -37,10 +37,6 @@
               <span class="dropdown-title">Bionic Arm</span>
               <span class="dropdown-sub">60+ Parts &middot; 500+ Hours</span>
             </a>
-            <a href="exoskeleton.html" class="dropdown-item" role="menuitem">
-              <span class="dropdown-title">Powered Exoskeleton (suit_v5)</span>
-              <span class="dropdown-sub">Python build123d &middot; Tendon Actuation</span>
-            </a>
           </div>
         </div>
         <a href="resume.html" class="nav-link">Resume</a>
@@ -60,7 +56,6 @@
     <a href="tilt-table.html" class="sub">AD5M 3+2-Axis Tilt Table</a>
     <a href="magpie.html" class="sub">Project Magpie</a>
     <a href="bionic-arm.html" class="sub">Bionic Arm</a>
-    <a href="exoskeleton.html" class="sub">Powered Exoskeleton (suit_v5)</a>
     <a href="resume.html" class="">Resume</a>
     <a href="contact.html" class="">Contact</a>
   </nav>
@@ -73,7 +68,7 @@
         <h1 style="margin:14px 0 18px;">Engineering Projects</h1>
         <p class="lead" style="max-width:680px;">
           Selected mechanical assemblies, code-driven parametric CAD pipelines, embedded motion
-          control hardware, and medical device verification fixtures.
+          control hardware, and mobile robotics.
         </p>
       </div>
     </section>
@@ -81,10 +76,9 @@
     <section class="section">
       <div class="container">
         <div class="filter-bar" data-filter-group=".proj-item">
-          <button type="button" class="filter-btn active" data-filter="all">All (4)</button>
+          <button type="button" class="filter-btn active" data-filter="all">All (3)</button>
           <button type="button" class="filter-btn" data-filter="mechanisms">Mechanisms &amp; CAD</button>
           <button type="button" class="filter-btn" data-filter="embedded">Embedded &amp; Robotics</button>
-          <button type="button" class="filter-btn" data-filter="medical">Medical Devices</button>
         </div>
 
         <div class="proj-item" data-category="mechanisms,embedded" style="padding-bottom:56px;border-bottom:1px solid var(--line);margin-bottom:56px;">
@@ -130,10 +124,17 @@
           </div>
         </div>
 
-        <div class="hairline-grid cols-3">
-          <article class="hairline-cell proj-item" data-category="mechanisms">
+        <div class="hairline-grid cols-2">
+          <article class="hairline-cell proj-item" data-category="mechanisms,embedded">
             <span class="index-num">02 &middot; Robotics &middot; 2026</span>
             <h3 style="margin:12px 0 14px;">Project Magpie</h3>
+            <div style="margin-bottom:18px;">
+              <figure class="figure-card">
+                <div class="figure-frame">
+                  <img src="images/magpie/fig01_assembly_views.jpg" alt="CAD views of the MagPick MP-340 robot">
+                </div>
+              </figure>
+            </div>
             <p class="metric-sub" style="margin-bottom:18px;">
               MagPick MP-340: a round robot that sweeps steel fasteners off the floor with a magnetic
               belt and sorts them into bins with a camera-guided SCARA arm on a Raspberry Pi 5.
@@ -171,38 +172,6 @@
               wrist-activated wearable assembly.
             </p>
             <a href="bionic-arm.html" class="btn btn-sm">View Case Study &rarr;</a>
-          </article>
-
-          <article class="hairline-cell proj-item" data-category="mechanisms,embedded">
-            <span class="index-num">04 &middot; Wearable Robotics &middot; 2026</span>
-            <h3 style="margin:12px 0 14px;">Powered Exoskeleton (suit_v5)</h3>
-            <div style="margin-bottom:18px;">
-              <figure class="figure-card">
-  <div class="photo-slot ratio-16-10" data-photo-slot="exo-hero" data-default-src="images/exo-hero.jpg" data-default-bw="false">
-    <img class="slot-img" alt="suit_v5 Assembly">
-    <div class="slot-placeholder">
-      <span class="eyebrow">CAD / 3D Studio</span>
-      <div class="slot-title">suit_v5 Assembly</div>
-      <div class="slot-desc">Drop images/exo-hero.jpg or drag a 3D Studio render here.</div>
-      <button type="button" class="btn btn-sm" data-slot-upload>Select or Drop Photo</button>
-    </div>
-    <div class="slot-controls">
-      <button type="button" class="slot-ctrl-btn" data-slot-bw>B&amp;W</button>
-      <button type="button" class="slot-ctrl-btn" data-slot-fit>Fit</button>
-      <button type="button" class="slot-ctrl-btn" data-slot-upload>Replace</button>
-      <button type="button" class="slot-ctrl-btn" data-slot-clear>Clear</button>
-    </div>
-    <input type="file" accept="image/*" class="slot-input">
-  </div>
-  
-</figure>
-            </div>
-            <p class="metric-sub" style="margin-bottom:18px;">
-              Modular Python + build123d parametric CAD pipeline generating a full-body exoskeleton
-              and single-arm prototype with 3D-printed tendon sheaths, wiring harnesses, and an
-              interactive browser 3D studio.
-            </p>
-            <a href="exoskeleton.html" class="btn btn-sm">View Case Study &rarr;</a>
           </article>
         </div>
       </div>
@@ -246,13 +215,6 @@
                 <td>SolidWorks / Fusion 360, FDM 3D Printing</td>
                 <td>500+ hours, 60+ interchangeable parts</td>
                 <td>Functional Prototype Built</td>
-              </tr>
-              <tr class="clickable-row" onclick="window.location='exoskeleton.html'">
-                <td>Powered Exoskeleton (suit_v5)</td>
-                <td>Parametric Wearable Robotics</td>
-                <td>Python, build123d, Tendon Routing, 3D Studio</td>
-                <td>Modular code-to-STL limb &amp; torso pipeline</td>
-                <td>Single-Arm Prototype Active</td>
               </tr>
             </tbody>
           </table>
