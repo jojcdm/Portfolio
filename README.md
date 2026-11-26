@@ -12,7 +12,6 @@ Clean, static, multi-page engineering portfolio built in pure black-and-white Sw
 ├── tilt-table.html     # Complete 10-Section AD5M 3+2-Axis Tilt Table Monograph
 ├── magpie.html         # Project Magpie (MagPick MP-340 sorting robot)
 ├── bionic-arm.html     # Bionic Arm (500+ hrs, 60+ interlocking pieces)
-├── exoskeleton.html    # Powered Exoskeleton (suit_v5 · Python build123d)
 ├── resume.html         # Printable Swiss Two-Column Resume
 ├── contact.html        # Direct Directory (Copy Email/Phone) & Message Composer
 ├── styles.css          # Shared monochrome stylesheet + @media print rules
@@ -44,6 +43,3 @@ Simply drop your `.jpg` photos into the `images/` folder using these exact filen
 | `bionic-hero.jpg` | Projects Index & Bionic Arm Hero |
 | `bionic-detail-1.jpg` | Bionic Arm Detail 1 |
 | `bionic-detail-2.jpg` | Bionic Arm Detail 2 |
-| `exo-hero.jpg` | Projects Index & Exoskeleton Hero |
-| `exo-detail-1.jpg` | Exoskeleton Detail 1 |
-| `exo-detail-2.jpg` | Exoskeleton Detail 2 |
