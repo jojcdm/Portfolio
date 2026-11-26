@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Magpie — Jack Johnston</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Jack Johnston</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <div class="nav-dropdown">
+          <button type="button" class="nav-link active" data-dropdown-trigger aria-haspopup="true">
+            Portfolio <span class="dropdown-caret">&#9662;</span>
+          </button>
+          <div class="dropdown-menu" role="menu">
+            <a href="projects.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">All Projects Overview</span>
+              <span class="dropdown-sub">Index &amp; Specification Matrix</span>
+            </a>
+            <a href="tilt-table.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">AD5M 3+2-Axis Tilt Table</span>
+              <span class="dropdown-sub">Flagship &middot; Rev. V6 &middot; Klipper</span>
+            </a>
+            <a href="magpie.html" class="dropdown-item active" role="menuitem">
+              <span class="dropdown-title">Project Magpie</span>
+              <span class="dropdown-sub">MagPick MP-340 &middot; Sorting Robot</span>
+            </a>
+            <a href="bionic-arm.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Bionic Arm</span>
+              <span class="dropdown-sub">60+ Parts &middot; 500+ Hours</span>
+            </a>
+            <a href="exoskeleton.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-title">Powered Exoskeleton (suit_v5)</span>
+              <span class="dropdown-sub">Python build123d &middot; Tendon Actuation</span>
+            </a>
+          </div>
+        </div>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" data-theme-toggle>Light</button>
+        <button type="button" class="mobile-menu-btn" data-mobile-toggle>Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-drawer" data-mobile-drawer aria-label="Mobile Navigation">
+    <a href="index.html" class="">Home</a>
+    <a href="experience.html" class="">Experience</a>
+    <a href="projects.html" class="">Portfolio &mdash; All Projects</a>
+    <a href="tilt-table.html" class="sub">AD5M 3+2-Axis Tilt Table</a>
+    <a href="magpie.html" class="sub active">Project Magpie</a>
+    <a href="bionic-arm.html" class="sub">Bionic Arm</a>
+    <a href="exoskeleton.html" class="sub">Powered Exoskeleton (suit_v5)</a>
+    <a href="resume.html" class="">Resume</a>
+    <a href="contact.html" class="">Contact</a>
+  </nav>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="projects.html" class="eyebrow">Portfolio</a>
+          <span class="eyebrow">/</span>
+          <span class="eyebrow">Robotics &middot; Team Project &middot; Fall 2026</span>
+        </div>
+        <h1>Project Magpie</h1>
+        <p class="lead" style="max-width:740px;margin-top:18px;">
+          MagPick MP-340: a 340 mm round robot that sweeps loose steel fasteners off the floor with
+          magnets, lifts them on a cleated belt onto a backlit pick plate, and sorts screws, nuts and
+          washers into bins with a camera-guided SCARA arm running on a Raspberry Pi 5.
+        </p>
+        <div class="hairline-grid cols-4" style="margin-top:36px;">
+          <div class="hairline-cell"><span class="label">Footprint</span><div class="metric-val">&Oslash;340 mm</div><div class="metric-sub">Round body, deck 98 mm high</div></div>
+          <div class="hairline-cell"><span class="label">Arm Reach</span><div class="metric-val">57&ndash;223 mm</div><div class="metric-sub">2-link SCARA, L1 120 / L2 105 mm</div></div>
+          <div class="hairline-cell"><span class="label">Magnetic Pickup</span><div class="metric-val">4&ndash;12&times;</div><div class="metric-sub">Pull vs. part weight at the floor (model)</div></div>
+          <div class="hairline-cell"><span class="label">Parts Budget</span><div class="metric-val">&asymp; $680</div><div class="metric-sub">46-line BOM, before shipping</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="grid-2" style="align-items:start;margin-bottom:48px;">
+          <figure class="figure-card">
+            <div class="figure-frame">
+              <img src="images/magpie/fig01_assembly_views.jpg" alt="Four CAD views of the MP-340 robot assembly: from right, rear left, top, and left side with clashes shown in red">
+            </div>
+            <figcaption class="caption"><strong>Figure 1:</strong> Full robot assembly in CAD from four sides. A script builds the whole robot and paints any clash between parts red.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <div class="figure-frame flush">
+              <img src="images/magpie/fig02_build_photo.jpg" alt="Printed orange chassis on the bench with the electronics and camera parts being fitted">
+            </div>
+            <figcaption class="caption"><strong>Figure 2:</strong> Printed PETG chassis on the bench during fit-up.</figcaption>
+          </figure>
+        </div>
+
+        <div class="section-header-stack">
+          <span class="eyebrow">01 / Problem &amp; Goal</span>
+          <h2>Clean up and sort loose hardware automatically</h2>
+        </div>
+        <div class="grid-2" style="margin-bottom:40px;">
+          <p>
+            Dropped screws, nuts and washers end up scattered across workshop floors and mixed
+            together in bins. Picking them up and sorting them by hand is slow. The goal was a
+            small mobile robot that collects steel fasteners on its own and drops each one into
+            the right bin.
+          </p>
+          <p>
+            The robot splits the job into three stages: a magnetic belt collects parts from the
+            floor, a backlit plate spreads them out so a camera sees each one as a clear dark
+            shape, and a SCARA arm with an electromagnet gripper picks each part and drops it
+            into its bin.
+          </p>
+        </div>
+
+        <div class="section-header-stack">
+          <span class="eyebrow">02 / System</span>
+          <h2>From floor to bin</h2>
+        </div>
+        <div class="svg-panel" style="margin-bottom:44px;">
+          <svg viewBox="0 0 920 170" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flow: magnetic belt conveyor to backlit pick plate to camera vision to SCARA arm with electromagnet to sorting bins">
+            <defs>
+              <marker id="arrm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1 L 10 5 L 0 9 z" fill="currentColor"/>
+              </marker>
+            </defs>
+            <g color="var(--text)" font-family="IBM Plex Sans, sans-serif">
+              <rect x="10" y="40" width="160" height="72" stroke="currentColor" stroke-width="1.25" fill="var(--bg)"/>
+              <text x="90" y="71" text-anchor="middle" fill="currentColor" font-size="13" font-weight="500">Magnetic Belt</text>
+              <text x="90" y="90" text-anchor="middle" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">33 N52 MAGNETS · 33°</text>
+              <rect x="195" y="40" width="160" height="72" stroke="currentColor" stroke-width="1.25" fill="var(--bg)"/>
+              <text x="275" y="71" text-anchor="middle" fill="currentColor" font-size="13" font-weight="500">Backlit Pick Plate</text>
+              <text x="275" y="90" text-anchor="middle" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">LED + VIBRATION</text>
+              <rect x="380" y="40" width="160" height="72" stroke="currentColor" stroke-width="1.75" fill="var(--bg)"/>
+              <text x="460" y="71" text-anchor="middle" fill="currentColor" font-size="13" font-weight="500">Camera Vision</text>
+              <text x="460" y="90" text-anchor="middle" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">TYPE + SIZE · PI 5</text>
+              <rect x="565" y="40" width="160" height="72" stroke="currentColor" stroke-width="1.75" fill="var(--bg)"/>
+              <text x="645" y="71" text-anchor="middle" fill="currentColor" font-size="13" font-weight="500">SCARA Arm</text>
+              <text x="645" y="90" text-anchor="middle" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">IK · KEEP-OUTS · MAGNET</text>
+              <rect x="750" y="40" width="160" height="72" stroke="currentColor" stroke-width="1.25" fill="var(--bg)"/>
+              <text x="830" y="71" text-anchor="middle" fill="currentColor" font-size="13" font-weight="500">Sorting Bins</text>
+              <text x="830" y="90" text-anchor="middle" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1">SCREW · NUT · WASHER</text>
+              <line x1="170" y1="76" x2="193" y2="76" stroke="currentColor" stroke-width="1.3" marker-end="url(#arrm)"/>
+              <line x1="355" y1="76" x2="378" y2="76" stroke="currentColor" stroke-width="1.3" marker-end="url(#arrm)"/>
+              <line x1="540" y1="76" x2="563" y2="76" stroke="currentColor" stroke-width="1.3" marker-end="url(#arrm)"/>
+              <line x1="725" y1="76" x2="748" y2="76" stroke="currentColor" stroke-width="1.3" marker-end="url(#arrm)"/>
+              <text x="460" y="150" text-anchor="middle" fill="var(--muted)" font-size="11" font-family="IBM Plex Sans Condensed, sans-serif" letter-spacing="1.4">PIXEL → ARM MM CALIBRATION · TCP LINK BETWEEN VISION APP AND ARM API</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="section-header-stack">
+          <span class="eyebrow">03 / Subsystems</span>
+          <h2>What I designed</h2>
+        </div>
+        <div class="hairline-grid cols-3" style="margin-bottom:40px;">
+          <div class="hairline-cell">
+            <span class="index-num">A</span>
+            <h3 style="margin:10px 0 8px;">SCARA Picker Arm (v2)</h3>
+            <p class="metric-sub">Two Feetech STS3215 bus servos (shoulder and elbow), each joint carried by a 6805 bearing so the servo sees no bending load. A micro servo drives a rack-and-pinion lift with about 39 mm of stroke, and a 12 V holding electromagnet is the gripper. v2 fixed v1's elbow walls, which the bearing bore had cut to under 1 mm, and added open servo pockets, cable windows and built-in horn-screw pilot holes.</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="index-num">B</span>
+            <h3 style="margin:10px 0 8px;">Magnetic Belt Conveyor (Rev C)</h3>
+            <p class="metric-sub">An 80 mm cleated belt on a 33&deg; incline. A fixed core of 15 N52 magnets inside a turning drum pulls parts off the floor; 18 more under the belt hold them while the cleats lift. The magnets stop 30 mm before the head pulley, so parts let go and slide down a ramp onto the pick plate. A field model sized the layout: 4&ndash;12&times; part weight at the floor, at least 30&times; around the drum.</p>
+          </div>
+          <div class="hairline-cell">
+            <span class="index-num">C</span>
+            <h3 style="margin:10px 0 8px;">Electronics Tray &amp; Wedge Bay (v4)</h3>
+            <p class="metric-sub">A drawer that slides into a bay in the left body wedge with 1.0 mm clearance all round, holding the Pi 5, the 5 V buck converter, the servo bus adapter and a perfboard on heat-set insert posts. Four revisions, each driven by a measured board or a fit problem on the printed part.</p>
+          </div>
+        </div>
+
+        <div class="grid-2" style="align-items:start;margin-bottom:48px;">
+          <figure class="figure-card">
+            <div class="figure-frame">
+              <img src="images/magpie/fig03_electronics_tray_v4.jpg" alt="Electronics tray revision 4 layout from above and in 3D, with Pi 5, buck converter, servo adapter and perfboard">
+            </div>
+            <figcaption class="caption"><strong>Figure 3:</strong> Electronics tray rev 4: board layout from above and in 3D.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <div class="figure-frame">
+              <img src="images/magpie/fig04_camera_stand.jpg" alt="Camera stand arm with a round lens opening above the pick plate">
+            </div>
+            <figcaption class="caption"><strong>Figure 4:</strong> Camera stand with a 27 mm opening for the webcam lens, 140&ndash;170 mm above the pick plate.</figcaption>
+          </figure>
+        </div>
+
+        <div class="section-header-stack">
+          <span class="eyebrow">04 / Software</span>
+          <h2>Pixels to joint angles</h2>
+        </div>
+        <div class="grid-2" style="margin-bottom:40px;">
+          <p>
+            A teammate wrote the vision app, which finds each fastener on the lit plate and reports
+            its type and size. My side turns that into motion: <span class="code-inline">cv_bridge.py</span>
+            converts pixels to arm millimetres from a calibration, <span class="code-inline">scara_picker.py</span>
+            solves inverse kinematics and plans paths around keep-out zones (conveyor, belt motor and
+            drop ramp), and <span class="code-inline">arm_api.py</span> drives the servos, lowers the lift,
+            switches the magnet and carries the part to its bin.
+          </p>
+          <p>
+            Bench tools (<span class="code-inline">servo_bench.py</span>, <span class="code-inline">arm_bench.py</span>)
+            scan the servo bus, zero the arm and trace test squares and circles.
+            <span class="code-inline">conveyor.py</span> runs the belt motor with ramps and a jam watchdog that
+            backs the belt off. A simulated servo bus lets the whole pipeline run with no hardware.
+          </p>
+        </div>
+
+        <div class="section-header-stack">
+          <span class="eyebrow">05 / Status</span>
+          <h2>Where it stands</h2>
+        </div>
+        <div class="hairline-grid cols-3" style="margin-bottom:40px;">
+          <div class="hairline-cell">
+            <span class="label">Built &amp; Tested</span>
+            <ul class="metric-sub" style="margin:10px 0 0;padding-left:18px;">
+              <li>Chassis printed in PETG</li>
+              <li>SCARA arm v2 printed and assembled</li>
+              <li>Arm zeroed on the Pi; both servos read back within 2&deg;</li>
+              <li>Lift servo running on the bench</li>
+            </ul>
+          </div>
+          <div class="hairline-cell">
+            <span class="label">Designed</span>
+            <ul class="metric-sub" style="margin:10px 0 0;padding-left:18px;">
+              <li>Magnetic conveyor Rev C (all clash checks clear; arm keeps 297/297 pick points)</li>
+              <li>Electronics tray v4 and left wedge bay</li>
+              <li>Camera stand</li>
+            </ul>
+          </div>
+          <div class="hairline-cell">
+            <span class="label">Next</span>
+            <ul class="metric-sub" style="margin:10px 0 0;padding-left:18px;">
+              <li>Fit the lift pinion and tune its travel</li>
+              <li>Mount the camera and calibrate pixels to arm coordinates</li>
+              <li>Teach the bins, then a dry pick run</li>
+              <li>Build the conveyor; add the magnet and battery</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag-chip">OpenSCAD &amp; Python CAD</span>
+          <span class="tag-chip">SCARA Kinematics</span>
+          <span class="tag-chip">Magnetic Field Modelling</span>
+          <span class="tag-chip">Raspberry Pi 5</span>
+          <span class="tag-chip">Bus Servos</span>
+          <span class="tag-chip">Computer Vision Integration</span>
+          <span class="tag-chip">Design for 3D Printing</span>
+          <span class="tag-chip">Team Project</span>
+        </div>
+
+        <div class="project-pagination">
+          <a href="tilt-table.html" class="pag-link">
+            <span class="label">&larr; Previous Case Study</span>
+            <span class="pag-title">AD5M 3+2-Axis Tilt Table</span>
+          </a>
+          <a href="bionic-arm.html" class="pag-link">
+            <span class="label">Next Case Study &rarr;</span>
+            <span class="pag-title">Bionic Arm</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">Jack Johnston</div>
+        <div class="caption" style="margin-top:6px;">
+          Mechanical Engineering &amp; Mathematics &middot; Duke University &rsquo;27 &middot; Durham, NC &amp; Corona del Mar, CA
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">All Projects</a>
+        <a href="tilt-table.html">AD5M Tilt Table</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://github.com/jojcdm" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jack-johnston-b060a22b8" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
