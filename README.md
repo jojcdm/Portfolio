@@ -10,7 +10,7 @@ Clean, static, multi-page engineering portfolio built in pure black-and-white Sw
 ├── experience.html     # Filterable Experience Timeline & Education
 ├── projects.html       # All Projects Index & Quick Specification Matrix
 ├── tilt-table.html     # Complete 10-Section AD5M 3+2-Axis Tilt Table Monograph
-├── fixture.html        # Invented Testing Fixture (J&J MedTech · INV2508037)
+├── magpie.html         # Project Magpie (MagPick MP-340 sorting robot)
 ├── bionic-arm.html     # Bionic Arm (500+ hrs, 60+ interlocking pieces)
 ├── exoskeleton.html    # Powered Exoskeleton (suit_v5 · Python build123d)
 ├── resume.html         # Printable Swiss Two-Column Resume
@@ -41,7 +41,6 @@ Simply drop your `.jpg` photos into the `images/` folder using these exact filen
 | `prototype-printer.jpg` | Home, AD5M Tilt Table (Figure 16: Mounted on AD5M Hero) |
 | `prototype-printer-tilted.jpg` | AD5M Tilt Table (Figure 16A: Tilted Gantry Clearance) |
 | `prototype-printer-clamp.jpg` | AD5M Tilt Table (Figure 16B: Bed Clamping & USB Routing) |
-| `fixture-hero.jpg` | Projects Index & Invented Testing Fixture (Non-confidential only) |
 | `bionic-hero.jpg` | Projects Index & Bionic Arm Hero |
 | `bionic-detail-1.jpg` | Bionic Arm Detail 1 |
 | `bionic-detail-2.jpg` | Bionic Arm Detail 2 |
