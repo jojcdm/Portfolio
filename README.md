@@ -9,7 +9,7 @@ Clean, static, multi-page engineering portfolio built in pure black-and-white Sw
 ├── index.html          # Splash Page (Portrait, About, 01–06 Disciplines, Featured Work)
 ├── experience.html     # Filterable Experience Timeline & Education
 ├── projects.html       # All Projects Index & Quick Specification Matrix
-├── tilt-table.html     # Complete 10-Section AD5M 3+2-Axis Tilt Table Monograph
+├── tilt-table.html     # Complete 10-Section 3-D Printer 5-Axis Modular Upgrade Monograph
 ├── magpie.html         # Project Magpie (MagPick MP-340 sorting robot)
 ├── bionic-arm.html     # Bionic Arm (500+ hrs, 60+ interlocking pieces)
 ├── resume.html         # Printable Swiss Two-Column Resume
